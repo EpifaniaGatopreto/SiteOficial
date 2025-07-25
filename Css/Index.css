@@ -1,0 +1,370 @@
+/* Corpo da página */
+body {
+  background-color: #1B1A17;
+  color: #F4F7F5;
+  font-family: 'Fredoka One', cursive, Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1b1a17;
+  border-bottom: 1px solid #f0a500;
+}
+
+.navbar-brand span {
+  color: #f0a500;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.nav-link {
+  color: #f4f7f5;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f0a500;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: #14130f;
+  padding: 180px 20px;
+  min-height: 75vh;
+  color: #f4f7f5;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 6px 20px rgba(198, 134, 0, 0.2); /* sombra suave abaixo do hero */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 900px;
+  height: 780px;
+  background-image: url('../Imgs/GatoPreto_transparente.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3.8rem;
+  font-weight: normal;
+  color: #c68600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.3;
+  margin-bottom: 60px;
+}
+
+.hero-subtitle {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.hero-subtitle .highlight {
+  color: #f0a500;
+  font-weight: 900;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Botão personalizado */
+.btn-amber {
+  background-color: #c68600;
+  border: none;
+  color: #14130f;
+  padding: 12px 28px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(198, 134, 0, 0.25); /* sombra suave */
+}
+
+.btn-amber:hover {
+  background-color: #a46e00;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(164, 110, 0, 0.4);
+}
+
+/* Linha amarela animada igual da navbar, entre hero e info */
+.separator-line {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(270deg, #f0a500, #c68600, #f0a500);
+  background-size: 600% 100%;
+  animation: gradientMove 8s linear infinite;
+  margin: 0;
+  border-radius: 2px 2px 0 0;
+}
+
+/* Animação para a linha */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Seção de info com texto e card */
+.info-section {
+  background-color: #23221d;
+  color: #f4f7f5;
+  font-family: 'Fredoka One', cursive, Arial, sans-serif;
+  padding: 40px 0;
+}
+
+/* Container quadrado com sombra para info-section */
+.info-box {
+  background-color: #23221d;
+  box-shadow: 0 10px 30px rgba(198, 134, 0, 0.2); /* sombra suave */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Título e texto da info-section */
+.info-title {
+  font-size: 2.8rem;
+  color: #c68600;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.info-description {
+  font-size: 1.25rem;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Lista não numerada */
+.info-list {
+  font-size: 1.1rem;
+  color: #ccc;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.info-list li {
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
+.info-list li:hover {
+  color: #f0a500;
+}
+
+/* Card estilizado SEM sombra */
+.animate-card {
+  border-radius: 15px;
+  max-width: 380px;
+  width: 100%;
+  color: #f4f7f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #3c3b34, #2a2a24);
+  box-shadow: none; /* sem sombra */
+}
+
+/* Ajuste o botão dentro do card animado */
+.animate-card .btn-amber {
+  align-self: center;
+  margin-top: 20px;
+  padding: 10px 26px;
+  font-size: 1.1rem;
+  box-shadow: 0 5px 12px rgba(198, 134, 0, 0.3); /* sombra leve */
+}
+
+.animate-card .btn-amber:hover {
+  box-shadow: 0 7px 16px rgba(164, 110, 0, 0.4);
+}
+
+.info-card {
+  border-radius: 15px;
+  max-width: 380px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: none;
+  box-shadow: none;
+  color: inherit;
+}
+
+/* Títulos e textos do card */
+.card-title {
+  font-size: 1.8rem;
+  color: #f0a500;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.card-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #ddd;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 140px 15px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .btn-amber {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+
+  .info-title {
+    font-size: 2.4rem;
+  }
+
+  .info-description {
+    font-size: 1.1rem;
+  }
+
+  .info-list {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section::before {
+    width: 350px;
+    height: 350px;
+    opacity: 0.08;
+  }
+
+  .hero-section {
+    padding: 120px 15px;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .info-section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-list {
+    padding-left: 0;
+  }
+
+  .info-list li {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .animate-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section::before {
+    width: 250px;
+    height: 250px;
+    opacity: 0.06;
+  }
+
+  .hero-section {
+    padding: 100px 10px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn-amber {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  .info-title {
+    font-size: 2rem;
+  }
+
+  .info-description,
+  .card-text {
+    font-size: 0.95rem;
+  }
+
+  .info-list li {
+    font-size: 0.9rem;
+  }
+}
+
+.img-square {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 4px solid #F0A500;
+  display: block; /* garante que mx-auto funcione */
+}
+
+
+
+/* Melhorando navbar para telas pequenas */
+@media (max-width: 576px) {
+  .navbar-brand span {
+    font-size: 1.4rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
