@@ -1,176 +1,174 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Epifania</title>
-  <link rel="icon" type="image/png" href="Imgs/GatoPreto_transparente.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Epifania | Comunidade de Programação</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    
+    <style>
+        body { font-family: 'Fredoka', sans-serif; }
+        
+        .bg-mesh {
+            background-color: #0a0a0a;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(217, 119, 6, 0.1) 0px, transparent 50%);
+        }
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  
-  <!-- Fonte personalizada -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
-  
-  <!-- Seu CSS -->
-  <link href="Css/Index.css" rel="stylesheet" />
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
 </head>
 
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-      <!-- Logo e Nome -->
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="Imgs/GatoPreto_transparente.png" alt="Logo" width="40" height="40" class="me-2 rounded-circle" />
-        <span>Epifania</span>
-      </a>
+<body class="bg-mesh text-gray-100 selection:bg-amber-500 selection:text-black">
 
-      <!-- Botão Toggle para mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Itens do Menu -->
-      <div class="collapse navbar-collapse" id="navbarMenu">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="Integrantes.html">Integrantes</a></li> -->
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="inicio" class="hero-section d-flex align-items-center justify-content-center text-center">
-    <div class="container hero-content">
-      <h1 class="hero-title">EPIFANIA</h1>
-      <p class="hero-subtitle">
-        A <span class="highlight">NOSSA</span> comunidade de programação.
-      </p>
-      <p class="hero-subtitle">
-        Da <span class="highlight">comunidade</span> para <span class="highlight">comunidade</span>.
-      </p>
-      <a href="#projetos" class="btn btn-amber btn-lg mt-4">Conheça Nosso Projeto</a>
-    </div>
-  </section>
-
-  <!-- Linha amarela animada -->
-  <div class="separator-line"></div>
-
-  <!-- Seção de Informações da Comunidade -->
-  <section id="sobre" class="info-section py-5">
-    <div class="container">
-      <div class="info-box shadow-lg p-5 rounded-4">
-
-        <!-- Primeira Linha: Comunidade + Card -->
-        <div class="row align-items-center">
-          <!-- Texto à esquerda -->
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <h2 class="info-title">🚀 Nossa Comunidade</h2>
-            <p class="info-description">
-              Somos uma comunidade aberta e inclusiva para todos apaixonados por tecnologia, sem fins lucrativos.
-               Nosso objetivo é compartilhar conhecimento, fomentar oportunidades e apoiar novos membros a crescerem na área.
-            </p>
-            <p>Há contribuição simbólica de R$10-15, destinada a alimentação e cursos exclusivos para nossos integrantes.</p>
-            <ul class="info-list">
-              <li>💡 Palestras e workshops mensais</li>
-              <li>🤝 Networking e troca de experiências entre membros</li>
-              <li>📚 Acesso a materiais e cursos gratuitos</li>
-              <li>🛠️ Projetos colaborativos para prática e portfólio</li>
-            </ul>
-          </div>
-
-          <!-- Card à direita -->
-          <div class="col-lg-6 d-flex justify-content-center">
-            <div class="info-card shadow-lg p-4 animate-card">
-              <h3 class="card-title">✨ Destaque do Mês</h3>
-              <p class="card-text">
-                Não perca nosso próximo encontro presencial! Será no sábado, dia 7 de Março.
-              </p>
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-amber-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <img src="Imgs/GatoPreto_transparente.png" alt="Logo" class="w-10 h-10 rounded-full border border-amber-500" />
+                    <span class="text-2xl font-bold tracking-tighter text-amber-500">EPIFANIA</span>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio" class="hover:text-amber-500 transition-colors px-3 py-2 font-medium">Início</a>
+                        <a href="#sobre" class="hover:text-amber-500 transition-colors px-3 py-2 font-medium">Sobre</a>
+                        <a href="#projetos" class="hover:text-amber-500 transition-colors px-3 py-2 font-medium">Projetos</a>
+                        <a href="#contato" class="bg-amber-500 text-black px-5 py-2 rounded-full font-bold hover:bg-amber-400 transition-all">Participar</a>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none">
+            <img src="Imgs/GatoPreto_transparente.png" alt="" class="w-[500px] animate-float" />
         </div>
 
-        <!-- Segunda Linha: Projetos + Card com imagem -->
-        <div id="projetos" class="row align-items-center mt-5">
-          <!-- Texto à direita -->
-          <div class="col-lg-6 mb-4 mb-lg-0 order-lg-2">
-            <h2 class="info-title">🌐 Projetos e Iniciativas</h2>
-            <p class="info-description">
-              Incentivamos nossos membros a participarem de projetos reais que ajudam a desenvolver habilidades técnicas e colaborativas. 
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-6xl md:text-8xl font-bold text-amber-500 mb-6 drop-shadow-2xl uppercase tracking-tighter">
+                Epifania
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                A <span class="text-amber-400 font-semibold underline decoration-amber-500/50">nossa</span> comunidade de programação. <br>
+                Da comunidade para a comunidade.
             </p>
-            <p>Atualmente, estamos promovendo uma atividade em que os integrantes contribuem com melhorias para o próprio site da comunidade.</p>
-            <!-- <p class="info-description mb-2">Segue aqui o link para participar:</p> -->
-            <!-- <a href="#" class="btn btn-amber mb-3" target="_blank" rel="noopener noreferrer">Participe</a> -->
-
-            <ul class="info-list">
-              <li>🏆 Competição interna com premiações</li>
-              <li>🌱 Palestras abertas ao público</li>
-            </ul>
-          </div>
-
-          <!-- Card com imagem à esquerda -->
-          <div class="col-lg-6 d-flex justify-content-center order-lg-1">
-            <div class="info-card shadow-lg p-4 animate-card text-center">
-              <img 
-                src="Imgs/Morgana.jpg" 
-                alt="Equipe colaborando em projeto" 
-                class="img-square rounded mb-3 mx-auto" 
-              />
-              <h3 class="card-title">🐈‍⬛ <span class="highlight">Morgana</span></h3>
-              <p class="card-text">
-                Conheça nosso mascote oficial!
-              </p>
-              <p> O querido gato preto.</p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projetos" class="px-8 py-4 bg-amber-500 text-black font-bold rounded-xl shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:scale-105 transition-transform">
+                    Conheça Nossos Projetos
+                </a>
+                <a href="#sobre" class="px-8 py-4 bg-transparent border border-gray-700 hover:border-amber-500 transition-colors rounded-xl font-bold">
+                    Saiba Mais
+                </a>
             </div>
-          </div>
         </div>
+    </section>
 
-        <!-- Contatos Sociais -->
-        <div id="contato" class="social-contact mt-5 text-center">
-          <h3 class="info-title">📱 Entre em Contato Conosco</h3>
-          <p class="info-description">
-            Participe da nossa comunidade e fique por dentro das novidades em tempo real!
-          </p>
+    <div class="h-[2px] w-full bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-30"></div>
 
-          <div class="d-flex flex-column align-items-center gap-2">
-            <a href="https://chat.whatsapp.com/FDYjm1nDJH6B4ZynmbEPOY" 
-               class="btn btn-success w-100 w-md-50" 
-               style="max-width: 300px;" 
-               target="_blank" 
-               rel="noopener noreferrer">
-              💬 Entrar no grupo do WhatsApp
-            </a>
+    <main class="max-w-7xl mx-auto px-4 py-24 space-y-32">
+        
+        <section id="sobre" class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <h2 class="text-4xl font-bold text-amber-500 flex items-center gap-3">
+                    <span class="p-3 bg-amber-500/10 rounded-2xl text-2xl">🚀</span> Nossa Comunidade
+                </h2>
+                <p class="text-lg text-gray-400 leading-relaxed">
+                    Somos uma comunidade aberta e inclusiva para todos apaixonados por tecnologia. Nosso objetivo é compartilhar conhecimento e apoiar novos membros.
+                </p>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex items-center gap-3 group">
+                        <span class="w-2 h-2 bg-amber-500 rounded-full group-hover:scale-150 transition-transform"></span>
+                        Palestras e workshops mensais
+                    </li>
+                    <li class="flex items-center gap-3 group">
+                        <span class="w-2 h-2 bg-amber-500 rounded-full group-hover:scale-150 transition-transform"></span>
+                        Networking e troca de experiências
+                    </li>
+                    <li class="flex items-center gap-3 group">
+                        <span class="w-2 h-2 bg-amber-500 rounded-full group-hover:scale-150 transition-transform"></span>
+                        Projetos colaborativos reais
+                    </li>
+                </ul>
+            </div>
 
-            <a href="https://discord.gg/r9RaHpnw" 
-               class="btn btn-primary w-100 w-md-50" 
-               style="max-width: 300px;" 
-               target="_blank" 
-               rel="noopener noreferrer">
-              🎧 Acessar nosso servidor no Discord
-            </a>
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-amber-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition"></div>
+                <div class="relative bg-zinc-900 border border-white/10 p-8 rounded-3xl backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold text-amber-400 mb-4">✨ Destaque do Mês</h3>
+                    <p class="text-gray-400 mb-6">Não perca nosso próximo encontro presencial! Prepare-se para muito código e networking.</p>
+                    <div class="flex items-center gap-4 p-4 bg-black/40 rounded-2xl border border-amber-500/20">
+                        <div class="text-amber-500 font-bold text-xl">07</div>
+                        <div class="text-sm uppercase tracking-widest font-semibold">Março • Sábado</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <!-- <a href="https://www.instagram.com/epifaniagatopreto" 
-               class="btn btn-danger w-100 w-md-50" 
-               style="max-width: 300px;" 
-               target="_blank" 
-               rel="noopener noreferrer">
-              📸 Seguir no Instagram
-            </a> -->
-          </div>
-        </div>
+        <section id="projetos" class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1 flex justify-center">
+                <div class="relative">
+                    <img src="Imgs/Morgana.jpg" alt="Morgana" class="w-72 h-72 object-cover rounded-3xl border-4 border-amber-500 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500" />
+                    <div class="absolute -bottom-6 -right-6 bg-amber-500 text-black p-4 rounded-2xl font-bold shadow-xl">
+                        Mascote Morgana 🐈‍⬛
+                    </div>
+                </div>
+            </div>
 
-      </div>
-    </div>
-  </section>
+            <div class="order-1 lg:order-2 space-y-6">
+                <h2 class="text-4xl font-bold text-amber-500 flex items-center gap-3">
+                    <span class="p-3 bg-amber-500/10 rounded-2xl text-2xl">🌐</span> Projetos Reais
+                </h2>
+                <p class="text-lg text-gray-400">
+                    Atualmente, estamos otimizando este portal! Os membros contribuem diretamente via GitHub, ganhando experiência com Git, Tailwind e deploy.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-zinc-900 rounded-xl border border-white/5">
+                        <span class="block text-amber-500 font-bold text-2xl">🏆</span>
+                        <span class="text-sm font-semibold uppercase">Competições</span>
+                    </div>
+                    <div class="p-4 bg-zinc-900 rounded-xl border border-white/5">
+                        <span class="block text-amber-500 font-bold text-2xl">🌱</span>
+                        <span class="text-sm font-semibold uppercase">Open Source</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="contato" class="bg-amber-500 rounded-[3rem] p-12 text-black text-center relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-4xl font-bold mb-4 italic">Bora codar juntos?</h2>
+                <p class="text-lg font-medium opacity-80 mb-10">Escolha sua plataforma favorita e entre no grupo.</p>
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://chat.whatsapp.com/..." class="bg-black text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:scale-105 transition-all shadow-xl">
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://discord.gg/..." class="bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:scale-105 transition-all shadow-xl">
+                        <span>Discord</span>
+                    </a>
+                </div>
+            </div>
+            <div class="absolute -top-24 -left-24 w-64 h-64 bg-amber-400 rounded-full opacity-50"></div>
+        </section>
 
-  <!-- Scripts Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </main>
+
+    <footer class="py-12 text-center text-gray-500 border-t border-white/5">
+        <p>&copy; 2026 Epifania. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
