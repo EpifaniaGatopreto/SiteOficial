@@ -51,7 +51,6 @@ export function iniciarHero() {
 
   let set = null;
   let quadros = [];
-  let carregados = 0;
   let ultimoDesenhado = -1;
   let agendado = false;
 
@@ -102,35 +101,51 @@ export function iniciarHero() {
   function carregar(nomeSet) {
     set = nomeSet;
     quadros = new Array(TOTAL);
-    carregados = 0;
     loader.classList.remove("fim");
     const cfg = SETS[nomeSet];
-    const fila = ordem();
+    const fila = ordem().map((i) => ({ i, tentativas: 0 }));
     let ativos = 0;
+    let finalizados = 0; // carregados + desistidos: é o que fecha a barra de progresso
+    let algumPronto = false;
     const MAX_PARALELO = 6;
+
+    const concluir = () => {
+      finalizados++;
+      const pct = Math.round((finalizados / TOTAL) * 100);
+      barra.style.width = pct + "%";
+      loader.setAttribute("aria-valuenow", pct);
+      if (finalizados === TOTAL) loader.classList.add("fim");
+    };
 
     const proximo = () => {
       if (set !== nomeSet) return; // mudou de desktop para mobile no meio do caminho
       while (ativos < MAX_PARALELO && fila.length) {
-        const i = fila.shift();
+        const item = fila.shift();
         const img = new Image();
         img.decoding = "async";
-        img.src = cfg.path + nome(i);
+        img.src = cfg.path + nome(item.i);
         ativos++;
         img
           .decode()
           .then(() => {
             if (set !== nomeSet) return;
-            quadros[i] = img;
-            carregados++;
-            const pct = Math.round((carregados / TOTAL) * 100);
-            barra.style.width = pct + "%";
-            loader.setAttribute("aria-valuenow", pct);
-            if (carregados === 1) canvas.classList.add("pronto");
-            if (carregados === TOTAL) loader.classList.add("fim");
+            quadros[item.i] = img;
+            if (!algumPronto) (algumPronto = true), canvas.classList.add("pronto");
+            concluir();
             agendar();
           })
-          .catch(() => {})
+          .catch(() => {
+            if (set !== nomeSet) return;
+            // falha passageira (rede do celular, servidor): tenta de novo 2 vezes; depois o
+            // quadro vizinho cobre a lacuna e a barra fecha mesmo assim
+            if (item.tentativas < 2) {
+              item.tentativas++;
+              setTimeout(() => {
+                fila.push(item);
+                proximo();
+              }, 800 * item.tentativas);
+            } else concluir();
+          })
           .finally(() => {
             ativos--;
             proximo();
