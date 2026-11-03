@@ -17,7 +17,7 @@ npm run dev
 | --- | --- |
 | Links (Instagram, WhatsApp, Discord, TikTok, GitHub, e-mail) | `src/links.js` — com o link vazio, o botão não aparece |
 | Textos das seções | `index.html` |
-| Próxima reunião | `index.html`, logo abaixo do hero — mude a data e o `data-ate`; o aviso some sozinho depois desse dia |
+| Próximo encontro | `index.html`, no card `#participar` da comunidade — mude a data e o `data-ate`; o bloco some sozinho depois desse dia e os botões ficam |
 | Marcos da história | `index.html`, em `#historia` — cada marco aponta para um commit real (`git log --reverse`) |
 | Cores e fontes | `src/styles.css` (`@theme`) |
 

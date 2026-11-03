@@ -3,7 +3,7 @@ import { aplicarLinks } from "./links.js";
 
 aplicarLinks();
 
-// Aviso de reunião some sozinho quando a data passa
+// O bloco do próximo encontro some sozinho quando a data passa
 for (const aviso of document.querySelectorAll("[data-ate]")) {
   if (new Date() > new Date(`${aviso.dataset.ate}T23:59:59-03:00`)) aviso.remove();
 }

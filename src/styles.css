@@ -31,9 +31,6 @@
   .botao {
     @apply inline-block rounded-full bg-amarelo px-7 py-3 font-pixel text-preto transition hover:-translate-y-0.5 hover:bg-creme;
   }
-  .botao-escuro {
-    @apply inline-block rounded-full bg-preto px-7 py-3.5 font-pixel text-creme transition hover:-translate-y-0.5 hover:text-amarelo;
-  }
   .rodape-link {
     @apply text-creme/70 transition-colors hover:text-amarelo;
   }
@@ -81,7 +78,7 @@ summary:focus-visible,
   pointer-events: none;
 }
 .logo-abertura {
-  height: clamp(11rem, 35svh, 26rem);
+  height: clamp(13rem, 46svh, 26rem);
   width: auto;
   filter: drop-shadow(0 24px 48px rgb(0 0 0 / 0.55));
 }
