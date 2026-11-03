@@ -1,0 +1,6 @@
+node_modules/
+dist/
+
+# Originais e masters em alta: NUNCA versionar (o repositório é público).
+# Só as versões geradas em public/ (com marca d'água e resolução limitada) vão para o git.
+assets-fonte/

@@ -1,174 +1,260 @@
-<!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
-<head>
+<!doctype html>
+<html lang="pt-BR" class="motion-safe:scroll-smooth">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Epifania | Comunidade de Programação</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&display=swap" rel="stylesheet" />
-    
-    <style>
-        body { font-family: 'Fredoka', sans-serif; }
-        
-        .bg-mesh {
-            background-color: #0a0a0a;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(217, 119, 6, 0.1) 0px, transparent 50%);
-        }
+    <title>Epifania — Gato Preto | Camisetas autorais</title>
+    <meta name="description" content="Epifania é uma marca de camisetas autorais que nasceu de uma comunidade de programação. Arte original, algodão e muito gato preto." />
+    <meta name="theme-color" content="#0b0a08" />
+    <link rel="canonical" href="https://epifaniagatopreto.com.br/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Epifania — Gato Preto" />
+    <meta property="og:description" content="Camisetas autorais que nasceram de uma comunidade de programação." />
+    <meta property="og:url" content="https://epifaniagatopreto.com.br/" />
+    <meta property="og:image" content="https://epifaniagatopreto.com.br/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-    </style>
-</head>
+    <!-- primeiro quadro do hero: é o maior elemento da primeira tela (LCP) -->
+    <link rel="preload" as="image" href="/frames/desktop/001.webp" media="(min-width: 768px) and (min-aspect-ratio: 4/5)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/frames/mobile/001.webp" media="(max-width: 767px), (max-aspect-ratio: 4/5)" fetchpriority="high" />
 
-<body class="bg-mesh text-gray-100 selection:bg-amber-500 selection:text-black">
+    <script>document.documentElement.classList.add("js");</script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
 
-    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-amber-500/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex items-center gap-3">
-                    <img src="Imgs/GatoPreto_transparente.png" alt="Logo" class="w-10 h-10 rounded-full border border-amber-500" />
-                    <span class="text-2xl font-bold tracking-tighter text-amber-500">EPIFANIA</span>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#inicio" class="hover:text-amber-500 transition-colors px-3 py-2 font-medium">Início</a>
-                        <a href="#sobre" class="hover:text-amber-500 transition-colors px-3 py-2 font-medium">Sobre</a>
-                        <a href="#projetos" class="hover:text-amber-500 transition-colors px-3 py-2 font-medium">Projetos</a>
-                        <a href="#contato" class="bg-amber-500 text-black px-5 py-2 rounded-full font-bold hover:bg-amber-400 transition-all">Participar</a>
-                    </div>
-                </div>
+  <body class="bg-preto font-sans text-creme antialiased selection:bg-amarelo selection:text-preto">
+    <a href="#colecao" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-amarelo focus:px-4 focus:py-2 focus:text-preto">Pular para o conteúdo</a>
+
+    <!-- ===== Header ===== -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-creme/10 bg-preto/75 backdrop-blur-md">
+      <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
+        <a href="#inicio" class="flex items-center gap-3" aria-label="Epifania — início">
+          <img src="/img/logo-48.webp" srcset="/img/logo-48.webp 1x, /img/logo-96.webp 2x" width="40" height="48" alt="" class="h-9 w-auto" />
+          <span class="font-pixel text-xl tracking-wide text-amarelo">epifania</span>
+        </a>
+
+        <nav class="hidden items-center gap-8 md:flex" aria-label="Principal">
+          <a href="#colecao" class="nav-link">Coleção</a>
+          <a href="#historia" class="nav-link">História</a>
+          <a href="#em-breve" class="nav-link">Em breve</a>
+          <a href="#comunidade" class="nav-link">Comunidade</a>
+          <a data-link="instagram" href="#" class="rounded-full bg-amarelo px-5 py-2 font-pixel text-sm text-preto transition hover:bg-creme">Instagram</a>
+        </nav>
+
+        <details class="menu-mobile relative md:hidden">
+          <summary class="cursor-pointer list-none rounded-full border border-creme/20 px-4 py-1.5 font-pixel text-sm">menu</summary>
+          <nav class="absolute right-0 mt-3 flex w-52 flex-col gap-1 rounded-2xl border border-creme/10 bg-preto p-3 shadow-2xl" aria-label="Principal (celular)">
+            <a href="#colecao" class="nav-link-m">Coleção</a>
+            <a href="#historia" class="nav-link-m">História</a>
+            <a href="#em-breve" class="nav-link-m">Em breve</a>
+            <a href="#comunidade" class="nav-link-m">Comunidade</a>
+            <a data-link="instagram" href="#" class="nav-link-m text-amarelo">Instagram</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== Hero: scrollytelling (quadros do vídeo desenhados em <canvas> conforme a rolagem) ===== -->
+      <section id="inicio" class="hero" aria-label="Uma camisa, para todos">
+        <div class="hero-anim">
+          <div class="hero-sticky">
+            <picture>
+              <source media="(max-width: 767px), (max-aspect-ratio: 4/5)" srcset="/frames/mobile/001.webp" width="720" height="1280" />
+              <img id="hero-poster" src="/frames/desktop/001.webp" width="1600" height="900" alt="" fetchpriority="high" class="hero-media" />
+            </picture>
+            <canvas id="hero-canvas" class="hero-media" aria-hidden="true"></canvas>
+
+            <div class="hero-copy" aria-live="off">
+              <p class="hero-line" data-line="1">Uma camisa.</p>
+              <p class="hero-line" data-line="2">Para todos.</p>
+              <p class="hero-line" data-line="3">Da comunidade para a comunidade.</p>
             </div>
-        </div>
-    </nav>
 
-    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none">
-            <img src="Imgs/GatoPreto_transparente.png" alt="" class="w-[500px] animate-float" />
+            <div class="hero-loader" role="progressbar" aria-label="Carregando animação" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span></span>
+            </div>
+            <p class="hero-hint font-pixel">role ↓</p>
+          </div>
         </div>
 
-        <div class="relative z-10 text-center px-4">
-            <h1 class="text-6xl md:text-8xl font-bold text-amber-500 mb-6 drop-shadow-2xl uppercase tracking-tighter">
-                Epifania
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                A <span class="text-amber-400 font-semibold underline decoration-amber-500/50">nossa</span> comunidade de programação. <br>
-                Da comunidade para a comunidade.
+        <!-- Sem animação (prefers-reduced-motion): as duas fotos lado a lado -->
+        <div class="hero-static">
+          <div class="mx-auto max-w-6xl px-5 pb-16 pt-28 md:px-8">
+            <p class="font-pixel text-3xl text-amarelo md:text-5xl">Uma camisa. Para todos.</p>
+            <p class="mt-3 text-lg text-creme/80">Da comunidade para a comunidade.</p>
+            <div class="mt-10 grid grid-cols-2 gap-4 md:gap-6">
+              <picture>
+                <source type="image/avif" srcset="/img/modelo-masculino-480.avif 480w, /img/modelo-masculino-960.avif 960w" sizes="(min-width: 1152px) 560px, 50vw" />
+                <img src="/img/modelo-masculino-960.webp" srcset="/img/modelo-masculino-480.webp 480w, /img/modelo-masculino-960.webp 960w" sizes="(min-width: 1152px) 560px, 50vw" width="960" height="1720" alt="Modelo masculino vestindo a camiseta branca com o logo no peito" class="w-full rounded-2xl" />
+              </picture>
+              <picture>
+                <source type="image/avif" srcset="/img/modelo-feminina-480.avif 480w, /img/modelo-feminina-960.avif 960w" sizes="(min-width: 1152px) 560px, 50vw" />
+                <img src="/img/modelo-feminina-960.webp" srcset="/img/modelo-feminina-480.webp 480w, /img/modelo-feminina-960.webp 960w" sizes="(min-width: 1152px) 560px, 50vw" width="960" height="1720" alt="Modelo feminina vestindo a mesma camiseta" class="w-full rounded-2xl" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Coleção 01 ===== -->
+      <section id="colecao" class="scroll-mt-16 border-t border-creme/10">
+        <div class="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
+          <div class="max-w-2xl" data-reveal>
+            <p class="eyebrow">Coleção 01</p>
+            <h2 class="titulo">Gato Programador</h2>
+            <p class="mt-6 text-lg leading-relaxed text-creme/75">
+              Na frente, um retrato discreto no peito. Nas costas, a arte completa: um gato preto, um teclado e todas as janelas de erro que a gente conhece bem.
             </p>
-            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#projetos" class="px-8 py-4 bg-amber-500 text-black font-bold rounded-xl shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:scale-105 transition-transform">
-                    Conheça Nossos Projetos
-                </a>
-                <a href="#sobre" class="px-8 py-4 bg-transparent border border-gray-700 hover:border-amber-500 transition-colors rounded-xl font-bold">
-                    Saiba Mais
-                </a>
-            </div>
+          </div>
+
+          <div class="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">
+            <figure data-reveal>
+              <div class="overflow-hidden rounded-3xl bg-[#958577]">
+                <picture>
+                  <source type="image/avif" srcset="/img/modelo-masculino-480.avif 480w, /img/modelo-masculino-960.avif 960w, /img/modelo-masculino-1440.avif 1440w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" />
+                  <img src="/img/modelo-masculino-960.webp" srcset="/img/modelo-masculino-480.webp 480w, /img/modelo-masculino-960.webp 960w, /img/modelo-masculino-1440.webp 1440w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" width="960" height="1720" loading="lazy" decoding="async" alt="Frente da camiseta: logo do gato de terno no peito esquerdo" class="aspect-[4/5] w-full object-cover object-[50%_30%]" />
+                </picture>
+              </div>
+              <figcaption class="legenda">Frente — retrato no peito esquerdo</figcaption>
+            </figure>
+
+            <figure data-reveal data-protegido>
+              <div class="arte-protegida overflow-hidden rounded-3xl bg-white">
+                <picture>
+                  <source type="image/avif" srcset="/arte/gato-programador-600.avif 600w, /arte/gato-programador-1029.avif 1029w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" />
+                  <img src="/arte/gato-programador-1029.webp" srcset="/arte/gato-programador-600.webp 600w, /arte/gato-programador-1029.webp 1029w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" width="1029" height="1200" loading="lazy" decoding="async" draggable="false" alt="Arte das costas: gato preto programando, cercado por janelas de computador" class="aspect-[4/5] w-full object-contain" />
+                </picture>
+              </div>
+              <figcaption class="legenda">Costas — arte “Gato Programador”</figcaption>
+            </figure>
+          </div>
+
+          <dl class="mt-12 grid gap-6 border-t border-creme/10 pt-8 sm:grid-cols-2 lg:grid-cols-4" data-reveal>
+            <div><dt class="eyebrow">Modelo</dt><dd class="mt-1 text-creme/80">Camiseta unissex</dd></div>
+            <div><dt class="eyebrow">Tecido</dt><dd class="mt-1 text-creme/80">100% algodão</dd></div>
+            <div><dt class="eyebrow">Estampa</dt><dd class="mt-1 text-creme/80">DTF — frente e costas</dd></div>
+            <div><dt class="eyebrow">Cores</dt><dd class="mt-1 text-creme/80">Branca · preta em breve</dd></div>
+          </dl>
+          <a data-link="instagram" href="#" class="botao mt-10" data-reveal>Quero a minha</a>
         </div>
-    </section>
+      </section>
 
-    <div class="h-[2px] w-full bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-30"></div>
+      <!-- ===== Nossa história =====
+           RASCUNHO: texto escrito a partir do que sabemos; revisar com a história real (quem, quando, por quê). -->
+      <section id="historia" class="scroll-mt-16 bg-creme text-preto">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 md:grid-cols-2 md:gap-20 md:px-8 md:py-32">
+          <figure class="order-2 md:order-1" data-reveal>
+            <picture>
+              <source type="image/avif" srcset="/img/morgana-480.avif 480w, /img/morgana-960.avif 960w" sizes="(min-width: 768px) 45vw, 100vw" />
+              <img src="/img/morgana-960.webp" srcset="/img/morgana-480.webp 480w, /img/morgana-960.webp 960w" sizes="(min-width: 768px) 45vw, 100vw" width="960" height="1707" loading="lazy" decoding="async" alt="Morgana, a gata preta mascote da Epifania, dormindo enrolada no lençol" class="aspect-[4/5] w-full rounded-3xl object-cover" />
+            </picture>
+            <figcaption class="mt-3 font-pixel text-sm text-preto/60">Morgana — a gata preta original.</figcaption>
+          </figure>
 
-    <main class="max-w-7xl mx-auto px-4 py-24 space-y-32">
-        
-        <section id="sobre" class="grid lg:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6">
-                <h2 class="text-4xl font-bold text-amber-500 flex items-center gap-3">
-                    <span class="p-3 bg-amber-500/10 rounded-2xl text-2xl">🚀</span> Nossa Comunidade
-                </h2>
-                <p class="text-lg text-gray-400 leading-relaxed">
-                    Somos uma comunidade aberta e inclusiva para todos apaixonados por tecnologia. Nosso objetivo é compartilhar conhecimento e apoiar novos membros.
-                </p>
-                <ul class="space-y-4 text-gray-300">
-                    <li class="flex items-center gap-3 group">
-                        <span class="w-2 h-2 bg-amber-500 rounded-full group-hover:scale-150 transition-transform"></span>
-                        Palestras e workshops mensais
-                    </li>
-                    <li class="flex items-center gap-3 group">
-                        <span class="w-2 h-2 bg-amber-500 rounded-full group-hover:scale-150 transition-transform"></span>
-                        Networking e troca de experiências
-                    </li>
-                    <li class="flex items-center gap-3 group">
-                        <span class="w-2 h-2 bg-amber-500 rounded-full group-hover:scale-150 transition-transform"></span>
-                        Projetos colaborativos reais
-                    </li>
-                </ul>
+          <div class="order-1 space-y-6 md:order-2">
+            <p class="eyebrow !text-preto/60" data-reveal>Nossa história</p>
+            <h2 class="titulo !text-preto" data-reveal>Começou com código.<br />Virou camiseta.</h2>
+            <p class="text-lg leading-relaxed text-preto/75" data-reveal>
+              A Epifania nasceu como uma comunidade de programação: gente trocando código, dúvidas e madrugadas de deploy. Do grupo saíram palestras, projetos em conjunto e uma mascote — a Morgana, uma gata preta de verdade.
+            </p>
+            <p class="text-lg leading-relaxed text-preto/75" data-reveal>
+              Com o tempo, as piadas internas começaram a virar desenho. Pedimos ao nosso artista que transformasse esse universo em estampa, fizemos 10 camisetas para testar se o pessoal ia gostar — e gostaram.
+            </p>
+            <p class="text-lg leading-relaxed text-preto/75" data-reveal>
+              Foi aí que a Epifania virou marca: roupa feita por quem vive entre bugs e café, para quem se reconhece nisso.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Em desenvolvimento ===== -->
+      <section id="em-breve" class="scroll-mt-16">
+        <div class="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
+          <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+            <div class="max-w-2xl" data-reveal>
+              <p class="eyebrow">Em desenvolvimento</p>
+              <h2 class="titulo">Próximas artes</h2>
+              <p class="mt-6 text-lg leading-relaxed text-creme/75">
+                Estamos desenhando as próximas estampas — cada uma passa por rascunho, piada interna e teste de impressão antes de virar camiseta. Acompanhe no Instagram para ver primeiro.
+              </p>
             </div>
+            <a data-link="instagram" href="#" class="botao shrink-0" data-reveal>Seguir no Instagram</a>
+          </div>
 
-            <div class="relative group">
-                <div class="absolute -inset-1 bg-amber-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition"></div>
-                <div class="relative bg-zinc-900 border border-white/10 p-8 rounded-3xl backdrop-blur-sm">
-                    <h3 class="text-2xl font-bold text-amber-400 mb-4">✨ Destaque do Mês</h3>
-                    <p class="text-gray-400 mb-6">Não perca nosso próximo encontro presencial! Prepare-se para muito código e networking.</p>
-                    <div class="flex items-center gap-4 p-4 bg-black/40 rounded-2xl border border-amber-500/20">
-                        <div class="text-amber-500 font-bold text-xl">???</div>
-                        <div class="text-sm uppercase tracking-widest font-semibold">Próxima reunião pendente</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <!-- Para mostrar uma arte real aqui: coloque o original em assets-fonte/arte-original/, rode `npm run artes`
+               e troque o <div class="em-breve-arte"> por um <picture> apontando para /arte/<nome>-600.webp -->
+          <ul class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-protegido>
+            <li class="em-breve-card" data-reveal>
+              <div class="em-breve-arte"><span class="font-pixel">?</span></div>
+              <span class="selo">Em breve</span>
+              <p class="mt-4 font-pixel text-lg">Arte 02</p>
+            </li>
+            <li class="em-breve-card" data-reveal>
+              <div class="em-breve-arte em-breve-arte--b"><span class="font-pixel">?</span></div>
+              <span class="selo">Em breve</span>
+              <p class="mt-4 font-pixel text-lg">Arte 03</p>
+            </li>
+            <li class="em-breve-card" data-reveal>
+              <div class="em-breve-arte em-breve-arte--c"><span class="font-pixel">?</span></div>
+              <span class="selo">Em breve</span>
+              <p class="mt-4 font-pixel text-lg">Arte 04</p>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <section id="projetos" class="grid lg:grid-cols-2 gap-16 items-center">
-            <div class="order-2 lg:order-1 flex justify-center">
-                <div class="relative">
-                    <img src="Imgs/Morgana.jpg" alt="Morgana" class="w-72 h-72 object-cover rounded-3xl border-4 border-amber-500 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500" />
-                    <div class="absolute -bottom-6 -right-6 bg-amber-500 text-black p-4 rounded-2xl font-bold shadow-xl">
-                        Mascote Morgana 🐈‍⬛
-                    </div>
-                </div>
-            </div>
-
-            <div class="order-1 lg:order-2 space-y-6">
-                <h2 class="text-4xl font-bold text-amber-500 flex items-center gap-3">
-                    <span class="p-3 bg-amber-500/10 rounded-2xl text-2xl">🌐</span> Projetos Reais
-                </h2>
-                <p class="text-lg text-gray-400">
-                    Atualmente, estamos otimizando este portal! Os membros contribuem diretamente via GitHub, ganhando experiência com Git, Tailwind e deploy.
-                </p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="p-4 bg-zinc-900 rounded-xl border border-white/5">
-                        <span class="block text-amber-500 font-bold text-2xl">🏆</span>
-                        <span class="text-sm font-semibold uppercase">Competições</span>
-                    </div>
-                    <div class="p-4 bg-zinc-900 rounded-xl border border-white/5">
-                        <span class="block text-amber-500 font-bold text-2xl">🌱</span>
-                        <span class="text-sm font-semibold uppercase">Open Source</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" class="bg-amber-500 rounded-[3rem] p-12 text-black text-center relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-4xl font-bold mb-4 italic">Bora codar juntos?</h2>
-                <p class="text-lg font-medium opacity-80 mb-10">Escolha sua plataforma favorita e entre no grupo.</p>
-                
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="https://chat.whatsapp.com/..." class="bg-black text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:scale-105 transition-all shadow-xl">
-                        <span>WhatsApp</span>
-                    </a>
-                    <a href="https://discord.gg/..." class="bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:scale-105 transition-all shadow-xl">
-                        <span>Discord</span>
-                    </a>
-                </div>
-            </div>
-            <div class="absolute -top-24 -left-24 w-64 h-64 bg-amber-400 rounded-full opacity-50"></div>
-        </section>
-
+      <!-- ===== Comunidade (mantida do site original) ===== -->
+      <section id="comunidade" class="scroll-mt-16 px-5 pb-24 md:px-8 md:pb-32">
+        <div class="mx-auto flex max-w-7xl flex-col items-center gap-8 rounded-[2rem] bg-amarelo px-6 py-14 text-center text-preto md:flex-row md:px-14 md:text-left" data-reveal>
+          <picture class="shrink-0">
+            <source type="image/avif" srcset="/img/logo-comunidade-160.avif 1x, /img/logo-comunidade-320.avif 2x" />
+            <img src="/img/logo-comunidade-160.webp" srcset="/img/logo-comunidade-160.webp 1x, /img/logo-comunidade-320.webp 2x" width="160" height="160" loading="lazy" decoding="async" alt="Primeiro logo da comunidade Epifania" class="h-28 w-28 rounded-full bg-preto p-2" />
+          </picture>
+          <div class="flex-1">
+            <p class="font-pixel text-sm uppercase tracking-widest text-preto/60">Comunidade</p>
+            <h2 class="mt-2 font-pixel text-3xl md:text-4xl">Nascemos como comunidade de programação.</h2>
+            <p class="mt-3 text-lg text-preto/75">E ela continua aberta: palestras, projetos colaborativos e muita troca. Bora codar juntos?</p>
+          </div>
+          <div class="flex shrink-0 flex-wrap justify-center gap-3">
+            <a data-link="whatsapp" href="#" class="rounded-2xl bg-preto px-6 py-3 font-pixel text-creme transition hover:scale-105">WhatsApp</a>
+            <a data-link="discord" href="#" class="rounded-2xl bg-preto px-6 py-3 font-pixel text-creme transition hover:scale-105">Discord</a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="py-12 text-center text-gray-500 border-t border-white/5">
-        <p>&copy; 2026 Epifania. Todos os direitos reservados.</p>
+    <!-- ===== Rodapé ===== -->
+    <footer class="border-t border-creme/10">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-3 md:px-8">
+        <div>
+          <a href="#inicio" class="flex items-center gap-3">
+            <img src="/img/logo-48.webp" srcset="/img/logo-48.webp 1x, /img/logo-96.webp 2x" width="40" height="48" loading="lazy" alt="" class="h-9 w-auto" />
+            <span class="font-pixel text-xl text-amarelo">epifania</span>
+          </a>
+          <p class="mt-4 max-w-xs text-creme/60">Camisetas autorais da comunidade Gato Preto.</p>
+        </div>
+        <nav aria-label="Redes sociais">
+          <p class="eyebrow">Redes</p>
+          <ul class="mt-4 space-y-2">
+            <li><a data-link="instagram" href="#" class="rodape-link">Instagram</a></li>
+            <li><a data-link="tiktok" href="#" class="rodape-link">TikTok</a></li>
+            <li><a data-link="discord" href="#" class="rodape-link">Discord</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="eyebrow">Contato</p>
+          <ul class="mt-4 space-y-2">
+            <li><a data-link="email" href="#" class="rodape-link">E-mail</a></li>
+            <li><a data-link="whatsapp" href="#" class="rodape-link">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="border-t border-creme/10 py-6 text-center text-sm text-creme/60">&copy; 2026 Epifania. Todos os direitos reservados. Artes protegidas — reprodução proibida.</p>
     </footer>
-
-</body>
+  </body>
 </html>
