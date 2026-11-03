@@ -1,10 +1,11 @@
-// Todos os links externos do site num lugar só. Preencha e pronto: os botões passam a funcionar.
-// Link vazio = o botão fica visível, mas avisa "em breve" em vez de levar a lugar nenhum.
+// Todos os links externos do site num lugar só. Preencha e pronto: os botões aparecem sozinhos.
+// Link vazio = o botão não aparece, em vez de levar a lugar nenhum.
 export const LINKS = {
-  instagram: "", // ex.: "https://instagram.com/epifaniagatopreto"
+  instagram: "https://www.instagram.com/epifaniagatopreto",
   tiktok: "",
-  whatsapp: "", // grupo da comunidade: "https://chat.whatsapp.com/..."
-  discord: "", // "https://discord.gg/..."
+  whatsapp: "https://chat.whatsapp.com/FDYjm1nDJH6B4ZynmbEPOY", // grupo da comunidade
+  discord: "", // o convite antigo expirou: gerar um novo, sem validade, e colar aqui ("https://discord.gg/...")
+  github: "https://github.com/EpifaniaGatopreto/SiteOficial",
   email: "", // ex.: "mailto:contato@epifaniagatopreto.com.br"
 };
 
@@ -18,10 +19,7 @@ export function aplicarLinks() {
         a.rel = "noopener";
       }
     } else {
-      a.removeAttribute("href");
-      a.setAttribute("aria-disabled", "true");
-      a.title = "Em breve";
-      a.style.cursor = "not-allowed";
+      (a.closest("li") ?? a).remove();
     }
   }
 }

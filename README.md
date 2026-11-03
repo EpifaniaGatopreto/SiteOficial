@@ -1,6 +1,8 @@
 # Epifania — Gato Preto
 
-Site da Epifania: marca de camisetas autorais que nasceu de uma comunidade de programação.
+Site da Epifania: uma comunidade de programação que virou marca de camisetas autorais.
+
+A página conta essa história em ordem: abertura, comunidade, história (contada pelos commits deste repositório), a marca e, por último, as camisetas.
 
 ## Rodar localmente
 
@@ -13,8 +15,10 @@ npm run dev
 
 | O quê | Onde |
 | --- | --- |
-| Links (Instagram, WhatsApp, Discord, TikTok, e-mail) | `src/links.js` — link vazio mostra o botão como "em breve" |
+| Links (Instagram, WhatsApp, Discord, TikTok, GitHub, e-mail) | `src/links.js` — com o link vazio, o botão não aparece |
 | Textos das seções | `index.html` |
+| Próxima reunião | `index.html`, logo abaixo do hero — mude a data e o `data-ate`; o aviso some sozinho depois desse dia |
+| Marcos da história | `index.html`, em `#historia` — cada marco aponta para um commit real (`git log --reverse`) |
 | Cores e fontes | `src/styles.css` (`@theme`) |
 
 ## Imagens e proteção das artes
@@ -37,8 +41,8 @@ npm run assets    # os dois
 npm run frames    # (reserva) quadros da transição para uma futura animação -> public/frames/
 ```
 
-Para mostrar uma arte nova na seção "Em breve": coloque o original em `assets-fonte/arte-original/`,
-rode `npm run artes` e troque o cartão placeholder em `index.html` por um `<picture>` apontando para
+Para mostrar uma arte nova: coloque o original em `assets-fonte/arte-original/`, rode `npm run artes` e
+acrescente um `<figure data-protegido>` na galeria de `#colecao` em `index.html`, apontando para
 `/arte/<nome>-600.webp`.
 
 ## Publicação

@@ -5,6 +5,7 @@
 
 @theme {
   --color-preto: #0b0a08;
+  --color-carvao: #15120e;
   --color-amarelo: #f2b705;
   --color-creme: #f4eee3;
   --font-pixel: "Pixelify Sans", ui-monospace, monospace;
@@ -30,11 +31,29 @@
   .botao {
     @apply inline-block rounded-full bg-amarelo px-7 py-3 font-pixel text-preto transition hover:-translate-y-0.5 hover:bg-creme;
   }
+  .botao-escuro {
+    @apply inline-block rounded-full bg-preto px-7 py-3.5 font-pixel text-creme transition hover:-translate-y-0.5 hover:text-amarelo;
+  }
   .rodape-link {
     @apply text-creme/70 transition-colors hover:text-amarelo;
   }
-  .selo {
-    @apply absolute left-4 top-4 rounded-full bg-amarelo px-3 py-1 font-pixel text-xs uppercase tracking-widest text-preto;
+  .pilar {
+    @apply flex gap-4 rounded-2xl bg-preto p-5 text-creme sm:flex-col sm:p-6;
+  }
+  .pilar-icone {
+    @apply w-11 shrink-0 font-pixel text-2xl leading-7 text-amarelo sm:w-auto sm:text-3xl;
+  }
+  .marco-meta {
+    @apply flex flex-wrap items-center gap-x-3 gap-y-1 font-pixel text-sm text-preto/60;
+  }
+  .marco-titulo {
+    @apply mt-2 font-pixel text-2xl leading-tight md:text-3xl;
+  }
+  .marco-texto {
+    @apply mt-2 text-lg leading-relaxed text-preto/75;
+  }
+  .commit {
+    @apply rounded bg-preto px-2 py-1 font-pixel text-xs text-amarelo transition-colors hover:bg-amarelo hover:text-preto;
   }
 }
 
@@ -42,8 +61,15 @@
   display: none;
 }
 
-/* ---------- Abertura: logo bem grande ---------- */
-.abertura::before {
+a:focus-visible,
+summary:focus-visible,
+.galeria:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* ---------- Brilho amarelo atrás dos logos ---------- */
+.brilho::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -55,9 +81,108 @@
   pointer-events: none;
 }
 .logo-abertura {
-  height: clamp(13rem, 46svh, 26rem);
+  height: clamp(11rem, 35svh, 26rem);
   width: auto;
   filter: drop-shadow(0 24px 48px rgb(0 0 0 / 0.55));
+}
+.seta-desce {
+  animation: descer 1.6s steps(3) infinite alternate;
+}
+@keyframes descer {
+  to {
+    translate: 0 6px;
+  }
+}
+
+/* ---------- Passagem entre seções: os pixels da cor seguinte vão se juntando ---------- */
+.borda-pixel {
+  height: 24px;
+}
+.borda-pixel::before {
+  --pixels: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='24' shape-rendering='crispEdges'%3E%3Cpath d='M0 16h64v8H0zM0 8h16v8H0zM24 8h8v8h-8zM40 8h16v8H40zM8 0h8v8H8zM48 0h8v8h-8z'/%3E%3C/svg%3E");
+  content: "";
+  display: block;
+  height: 100%;
+  background: currentColor;
+  -webkit-mask: var(--pixels) repeat-x left bottom / 64px 24px;
+  mask: var(--pixels) repeat-x left bottom / 64px 24px;
+}
+
+/* ---------- Linha do tempo: o nosso git log ---------- */
+.linha-tempo {
+  position: relative;
+}
+.linha-tempo::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: repeating-linear-gradient(to bottom, rgb(11 10 8 / 0.35) 0 6px, transparent 6px 12px);
+}
+.linha-tempo > li {
+  position: relative;
+  padding-left: 2.25rem;
+}
+.linha-tempo > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  width: 12px;
+  height: 12px;
+  background: var(--color-preto);
+}
+.linha-tempo > li.marco-destaque::before {
+  top: 2rem;
+  background: var(--color-amarelo);
+  outline: 2px solid var(--color-preto);
+}
+.marco-destaque .commit {
+  background: var(--color-amarelo);
+  color: var(--color-preto);
+}
+.marco-destaque .commit:hover {
+  background: var(--color-creme);
+}
+.cursor::after {
+  content: "_";
+  animation: piscar 1.1s steps(1) infinite;
+}
+@keyframes piscar {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Galeria da camiseta: desliza no celular, três colunas a partir do tablet ---------- */
+.galeria {
+  display: flex;
+  gap: 1rem;
+  margin-inline: -1.25rem;
+  padding-inline: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 1.25rem;
+  scrollbar-width: none;
+}
+.galeria::-webkit-scrollbar {
+  display: none;
+}
+.galeria > figure {
+  flex: 0 0 82%;
+  scroll-snap-align: start;
+}
+@media (min-width: 768px) {
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-inline: 0;
+    padding-inline: 0;
+    overflow: visible;
+  }
 }
 
 /* ---------- Entrada suave das seções ---------- */
@@ -78,6 +203,10 @@
     transform: none;
     transition: none;
   }
+  .seta-desce,
+  .cursor::after {
+    animation: none;
+  }
 }
 
 /* ---------- Proteção das artes (dissuasiva) ---------- */
@@ -94,35 +223,4 @@
   content: "";
   position: absolute;
   inset: 0; /* camada transparente por cima: "salvar imagem" pega a camada, não a arte */
-}
-
-/* ---------- Cartões "Em breve" (placeholder até as artes ficarem prontas) ---------- */
-.em-breve-card {
-  position: relative;
-}
-.em-breve-arte {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 4 / 5;
-  border-radius: 1.5rem;
-  border: 1px solid rgb(244 238 227 / 0.1);
-  background:
-    radial-gradient(circle, rgb(242 183 5 / 0.35) 1.2px, transparent 1.6px) 0 0 / 10px 10px,
-    linear-gradient(160deg, #1a1712, #0b0a08);
-  overflow: hidden;
-}
-.em-breve-arte span {
-  font-size: 7rem;
-  color: rgb(242 183 5 / 0.85);
-  filter: blur(1px);
-}
-.em-breve-arte--b {
-  background:
-    radial-gradient(circle, rgb(244 238 227 / 0.3) 1.2px, transparent 1.6px) 0 0 / 12px 12px,
-    linear-gradient(200deg, #221d16, #0b0a08);
-}
-.em-breve-arte--c {
-  background:
-    radial-gradient(circle, rgb(242 183 5 / 0.25) 1.6px, transparent 2px) 0 0 / 14px 14px,
-    linear-gradient(120deg, #15130f, #2a2318);
 }

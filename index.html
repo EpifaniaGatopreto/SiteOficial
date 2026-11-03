@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Epifania — Gato Preto | Camisetas autorais</title>
-    <meta name="description" content="Epifania é uma marca de camisetas autorais: arte original, algodão e muito gato preto. Feitas para todo mundo." />
+    <title>Epifania — Gato Preto | A comunidade que virou marca</title>
+    <meta name="description" content="A Epifania é uma comunidade de programação, aberta a quem programa ou quer aprender, que virou marca de camisetas autorais com arte original e muito gato preto." />
     <meta name="theme-color" content="#0b0a08" />
     <link rel="canonical" href="https://epifaniagatopreto.com.br/" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
@@ -14,7 +14,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:title" content="Epifania — Gato Preto" />
-    <meta property="og:description" content="Camisetas autorais com arte original e muito gato preto." />
+    <meta property="og:description" content="Uma comunidade de programação que virou marca." />
     <meta property="og:url" content="https://epifaniagatopreto.com.br/" />
     <meta property="og:image" content="https://epifaniagatopreto.com.br/og.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -27,10 +27,10 @@
   </head>
 
   <body class="bg-preto font-sans text-creme antialiased selection:bg-amarelo selection:text-preto">
-    <a href="#colecao" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-amarelo focus:px-4 focus:py-2 focus:text-preto">Pular para o conteúdo</a>
+    <a href="#comunidade" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-amarelo focus:px-4 focus:py-2 focus:text-preto">Pular para o conteúdo</a>
 
     <!-- ===== Header ===== -->
-    <header class="fixed inset-x-0 top-0 z-50 border-b border-creme/10 bg-preto/75 backdrop-blur-md">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-creme/10 bg-preto/95 backdrop-blur-md">
       <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
         <a href="#inicio" class="flex items-center gap-3" aria-label="Epifania — início">
           <img src="/img/logo-48.webp" srcset="/img/logo-48.webp 1x, /img/logo-96.webp 2x" width="40" height="48" alt="" class="h-9 w-auto" />
@@ -38,21 +38,21 @@
         </a>
 
         <nav class="hidden items-center gap-8 md:flex" aria-label="Principal">
-          <a href="#colecao" class="nav-link">Coleção</a>
-          <a href="#historia" class="nav-link">História</a>
-          <a href="#em-breve" class="nav-link">Em breve</a>
           <a href="#comunidade" class="nav-link">Comunidade</a>
-          <a data-link="instagram" href="#" class="rounded-full bg-amarelo px-5 py-2 font-pixel text-sm text-preto transition hover:bg-creme">Instagram</a>
+          <a href="#historia" class="nav-link">História</a>
+          <a href="#marca" class="nav-link">A marca</a>
+          <a href="#colecao" class="nav-link">Camisetas</a>
+          <a href="#participar" class="rounded-full bg-amarelo px-5 py-2 font-pixel text-sm text-preto transition hover:bg-creme">Participar</a>
         </nav>
 
         <details class="menu-mobile relative md:hidden">
           <summary class="cursor-pointer list-none rounded-full border border-creme/20 px-4 py-1.5 font-pixel text-sm">menu</summary>
           <nav class="absolute right-0 mt-3 flex w-52 flex-col gap-1 rounded-2xl border border-creme/10 bg-preto p-3 shadow-2xl" aria-label="Principal (celular)">
-            <a href="#colecao" class="nav-link-m">Coleção</a>
-            <a href="#historia" class="nav-link-m">História</a>
-            <a href="#em-breve" class="nav-link-m">Em breve</a>
             <a href="#comunidade" class="nav-link-m">Comunidade</a>
-            <a data-link="instagram" href="#" class="nav-link-m text-amarelo">Instagram</a>
+            <a href="#historia" class="nav-link-m">História</a>
+            <a href="#marca" class="nav-link-m">A marca</a>
+            <a href="#colecao" class="nav-link-m">Camisetas</a>
+            <a href="#participar" class="nav-link-m text-amarelo">Participar</a>
           </nav>
         </details>
       </div>
@@ -60,161 +60,244 @@
 
     <main>
       <!-- ===== Abertura: a marca, com o logo bem grande ===== -->
-      <section id="inicio" class="abertura relative flex min-h-svh flex-col items-center justify-center overflow-hidden px-5 pb-14 pt-24 text-center">
+      <section id="inicio" class="brilho relative flex min-h-[calc(100svh-5.5rem)] flex-col items-center justify-center overflow-hidden px-5 pb-6 pt-20 text-center">
         <picture class="relative">
           <source type="image/avif" srcset="/img/logo-grande-300.avif 1x, /img/logo-grande-601.avif 2x" />
           <img src="/img/logo-grande-601.webp" srcset="/img/logo-grande-300.webp 1x, /img/logo-grande-601.webp 2x" width="495" height="601" fetchpriority="high" alt="Logo da Epifania: retrato de um gato preto de terno vermelho numa moldura oval" class="logo-abertura" />
         </picture>
-        <h1 class="relative mt-8 font-pixel text-[clamp(3.5rem,11vw,8rem)] leading-none text-amarelo">epifania</h1>
+        <h1 class="relative mt-6 font-pixel text-[clamp(3.5rem,11vw,8rem)] leading-none text-amarelo">epifania</h1>
         <p class="relative mt-3 font-pixel text-lg uppercase tracking-[0.35em] text-creme/70">gato preto</p>
-        <p class="relative mt-8 max-w-xl text-xl leading-relaxed text-creme/85 md:text-2xl">
-          Camisetas autorais com arte original e muito gato preto.
+        <p class="relative mt-5 max-w-xl text-xl leading-relaxed text-creme/85 md:text-2xl">
+          Uma comunidade de programação que <span class="text-amarelo">virou marca</span>.
         </p>
-        <a href="#colecao" class="relative mt-10 font-pixel text-sm text-creme/70 transition hover:text-amarelo">conheça a coleção ↓</a>
+        <a href="#comunidade" class="relative mt-5 inline-flex items-center gap-2 font-pixel text-sm text-creme/70 transition hover:text-amarelo">
+          conheça a comunidade
+          <svg viewBox="0 0 7 9" width="14" height="18" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true" class="seta-desce"><path d="M3 0h1v7H3zM1 5h1v1H1zM2 6h1v1H2zM3 7h1v1H3zM4 6h1v1H4zM5 5h1v1H5z" /></svg>
+        </a>
       </section>
 
-      <!-- ===== Coleção 01 ===== -->
-      <section id="colecao" class="scroll-mt-16 border-t border-creme/10">
-        <div class="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
-          <div class="max-w-2xl" data-reveal>
-            <p class="eyebrow">Coleção 01</p>
-            <h2 class="titulo">Gato Programador</h2>
-            <p class="mt-6 text-lg leading-relaxed text-creme/75">
-              Na frente, um retrato discreto no peito. Nas costas, a arte completa: um gato preto no computador, cercado de janelas, plantas e caos — qualquer semelhança com o seu dia não é coincidência.
-            </p>
-          </div>
+      <!-- ===== Próxima reunião: para trocar, mude a data aqui. O aviso some sozinho depois do dia em data-ate. ===== -->
+      <a href="#participar" data-ate="2026-11-28" class="group block border-y border-amarelo/40 bg-carvao transition-colors hover:bg-preto">
+        <span class="mx-auto flex max-w-7xl items-center gap-4 px-5 py-3 md:px-8">
+          <time datetime="2026-11-28" class="shrink-0 rounded-lg bg-amarelo px-3 py-1.5 text-center font-pixel leading-none text-preto">
+            <span class="block text-2xl">28</span>
+            <span class="block text-xs uppercase tracking-widest">nov</span>
+          </time>
+          <span class="min-w-0 flex-1">
+            <span class="eyebrow block !text-xs !tracking-[0.04em] sm:!text-sm sm:!tracking-[0.2em]">Próxima reunião presencial</span>
+            <span class="mt-0.5 block leading-snug text-creme/85">Sábado, 28 de novembro. É neste mês! <span class="hidden text-creme/60 sm:inline">Detalhes no grupo.</span></span>
+          </span>
+          <svg viewBox="0 0 9 7" width="18" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true" class="shrink-0 text-amarelo transition-transform group-hover:translate-x-1 sm:h-[21px] sm:w-[27px]"><path d="M0 3h7v1H0zM5 1h1v1H5zM6 2h1v1H6zM7 3h1v1H7zM6 4h1v1H6zM5 5h1v1H5z" /></svg>
+        </span>
+      </a>
 
-          <div class="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">
-            <figure data-reveal>
-              <div class="overflow-hidden rounded-3xl bg-[#958577]">
-                <picture>
-                  <source type="image/avif" srcset="/img/modelo-masculino-480.avif 480w, /img/modelo-masculino-960.avif 960w, /img/modelo-masculino-1440.avif 1440w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" />
-                  <img src="/img/modelo-masculino-960.webp" srcset="/img/modelo-masculino-480.webp 480w, /img/modelo-masculino-960.webp 960w, /img/modelo-masculino-1440.webp 1440w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" width="960" height="1200" loading="lazy" decoding="async" alt="Modelo masculino com a camiseta branca: logo do gato de terno no peito esquerdo" class="aspect-[4/5] w-full object-cover object-top" />
-                </picture>
-              </div>
-              <figcaption class="legenda">Frente — retrato no peito esquerdo</figcaption>
-            </figure>
+      <div class="borda-pixel bg-preto text-amarelo" aria-hidden="true"></div>
 
-            <figure data-reveal data-protegido>
-              <div class="arte-protegida overflow-hidden rounded-3xl bg-white">
-                <picture>
-                  <source type="image/avif" srcset="/arte/gato-programador-600.avif 600w, /arte/gato-programador-1029.avif 1029w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" />
-                  <img src="/arte/gato-programador-1029.webp" srcset="/arte/gato-programador-600.webp 600w, /arte/gato-programador-1029.webp 1029w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" width="1029" height="1200" loading="lazy" decoding="async" draggable="false" alt="Arte das costas: gato preto programando, cercado por janelas de computador" class="aspect-[4/5] w-full object-contain" />
-                </picture>
-              </div>
-              <figcaption class="legenda">Costas — arte “Gato Programador”</figcaption>
-            </figure>
-          </div>
-
-          <dl class="mt-12 grid gap-6 border-t border-creme/10 pt-8 sm:grid-cols-2 lg:grid-cols-4" data-reveal>
-            <div><dt class="eyebrow">Modelo</dt><dd class="mt-1 text-creme/80">Camiseta unissex</dd></div>
-            <div><dt class="eyebrow">Tecido</dt><dd class="mt-1 text-creme/80">100% algodão</dd></div>
-            <div><dt class="eyebrow">Estampa</dt><dd class="mt-1 text-creme/80">DTF — frente e costas</dd></div>
-            <div><dt class="eyebrow">Cores</dt><dd class="mt-1 text-creme/80">Branca · preta em breve</dd></div>
-          </dl>
-        </div>
-      </section>
-
-      <!-- ===== Nossa história =====
-           RASCUNHO: texto escrito a partir do que sabemos; revisar com a história real (quem, quando, por quê). -->
-      <section id="historia" class="scroll-mt-16 bg-creme text-preto">
-        <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 md:grid-cols-2 md:gap-20 md:px-8 md:py-32">
-          <figure class="order-2 md:order-1" data-reveal>
+      <!-- ===== Comunidade: é por aqui que tudo começa ===== -->
+      <section id="comunidade" class="scroll-mt-16 bg-amarelo text-preto">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-2 lg:gap-20">
+          <div data-reveal>
             <picture>
-              <source type="image/avif" srcset="/img/morgana-480.avif 480w, /img/morgana-960.avif 960w" sizes="(min-width: 768px) 45vw, 100vw" />
-              <img src="/img/morgana-960.webp" srcset="/img/morgana-480.webp 480w, /img/morgana-960.webp 960w" sizes="(min-width: 768px) 45vw, 100vw" width="960" height="1707" loading="lazy" decoding="async" alt="Morgana, a gata preta mascote da Epifania, dormindo enrolada no lençol" class="aspect-[4/5] w-full rounded-3xl object-cover" />
+              <source type="image/avif" srcset="/img/logo-comunidade-160.avif 1x, /img/logo-comunidade-320.avif 2x" />
+              <img src="/img/logo-comunidade-160.webp" srcset="/img/logo-comunidade-160.webp 1x, /img/logo-comunidade-320.webp 2x" width="160" height="160" loading="lazy" decoding="async" alt="Primeiro logo da comunidade Epifania: cara de gato preto de olhos laranja" class="h-24 w-24 rounded-full bg-preto p-2 md:h-28 md:w-28" />
             </picture>
-            <figcaption class="mt-3 font-pixel text-sm text-preto/60">Morgana — a gata preta original.</figcaption>
-          </figure>
-
-          <div class="order-1 space-y-6 md:order-2">
-            <p class="eyebrow !text-preto/60" data-reveal>Nossa história</p>
-            <h2 class="titulo !text-preto" data-reveal>Começou com código.<br />Virou camiseta.</h2>
-            <p class="text-lg leading-relaxed text-preto/75" data-reveal>
-              A Epifania nasceu como uma comunidade de programação: gente trocando conhecimento, dúvidas e muitas madrugadas em frente ao computador. Do grupo saíram palestras, projetos em conjunto e uma mascote — a Morgana, uma gata preta de verdade.
+            <p class="eyebrow mt-8 !text-preto/70">Comunidade</p>
+            <h2 class="titulo !text-preto">Onde tudo começou.</h2>
+            <p class="mt-6 text-lg leading-relaxed text-preto/80">
+              A Epifania é uma comunidade de programação aberta a quem já programa e a quem quer aprender. A ideia sempre foi a mesma: compartilhar conhecimento, abrir portas e ajudar quem está chegando a crescer na área.
             </p>
-            <p class="text-lg leading-relaxed text-preto/75" data-reveal>
-              Com o tempo, as piadas internas começaram a virar desenho. Pedimos ao nosso artista que transformasse esse universo em estampa, fizemos 10 camisetas para testar se o pessoal ia gostar — e gostaram.
-            </p>
-            <p class="text-lg leading-relaxed text-preto/75" data-reveal>
-              Foi aí que a Epifania virou marca. A comunidade continua sendo a nossa origem, mas as camisetas são para todo mundo: para quem gosta de arte, de bom humor e de gato preto.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== Para todos (unissex) ===== -->
-      <section id="para-todos" class="scroll-mt-16">
-        <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 md:grid-cols-2 md:gap-20 md:px-8 md:py-32">
-          <div class="space-y-6">
-            <p class="eyebrow" data-reveal>Unissex</p>
-            <h2 class="titulo" data-reveal>Uma camisa.<br />Para todos.</h2>
-            <p class="text-lg leading-relaxed text-creme/75" data-reveal>
-              A mesma camiseta e a mesma arte, em qualquer corpo. Modelagem unissex em algodão, feita para o dia a dia — do trabalho ao fim de semana.
-            </p>
-          </div>
-          <figure data-reveal>
-            <div class="overflow-hidden rounded-3xl bg-[#958577]">
-              <picture>
-                <source type="image/avif" srcset="/img/modelo-feminina-480.avif 480w, /img/modelo-feminina-960.avif 960w, /img/modelo-feminina-1440.avif 1440w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" />
-                <img src="/img/modelo-feminina-960.webp" srcset="/img/modelo-feminina-480.webp 480w, /img/modelo-feminina-960.webp 960w, /img/modelo-feminina-1440.webp 1440w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" width="960" height="1200" loading="lazy" decoding="async" alt="Modelo feminina com a mesma camiseta branca e o logo no peito" class="aspect-[4/5] w-full object-cover object-top" />
-              </picture>
+            <p class="mt-6 font-pixel text-2xl md:text-3xl">Da comunidade para a comunidade.</p>
+            <div id="participar" class="mt-8 flex scroll-mt-24 flex-wrap gap-3">
+              <a data-link="whatsapp" href="#" class="botao-escuro">Entrar no WhatsApp</a>
+              <a data-link="discord" href="#" class="botao-escuro">Entrar no Discord</a>
             </div>
-          </figure>
-        </div>
-      </section>
-
-      <!-- ===== Em desenvolvimento ===== -->
-      <section id="em-breve" class="scroll-mt-16">
-        <div class="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
-          <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
-            <div class="max-w-2xl" data-reveal>
-              <p class="eyebrow">Em desenvolvimento</p>
-              <h2 class="titulo">Próximas artes</h2>
-              <p class="mt-6 text-lg leading-relaxed text-creme/75">
-                Estamos desenhando as próximas estampas — cada uma passa por rascunho, muitas ideias e teste de impressão antes de virar camiseta. Acompanhe no Instagram para ver primeiro.
-              </p>
-            </div>
-            <a data-link="instagram" href="#" class="botao shrink-0" data-reveal>Seguir no Instagram</a>
+            <p class="mt-4 text-preto/70">Quem quer aprender é tão bem-vindo quanto quem já programa.</p>
           </div>
 
-          <!-- Para mostrar uma arte real aqui: coloque o original em assets-fonte/arte-original/, rode `npm run artes`
-               e troque o <div class="em-breve-arte"> por um <picture> apontando para /arte/<nome>-600.webp -->
-          <ul class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-protegido>
-            <li class="em-breve-card" data-reveal>
-              <div class="em-breve-arte"><span class="font-pixel">?</span></div>
-              <span class="selo">Em breve</span>
-              <p class="mt-4 font-pixel text-lg">Arte 02</p>
+          <ul class="grid gap-3 sm:grid-cols-2 sm:gap-4">
+            <li class="pilar" data-reveal>
+              <span class="pilar-icone" aria-hidden="true">&gt;_</span>
+              <div>
+                <h3 class="font-pixel text-xl">Palestras e workshops</h3>
+                <p class="mt-2 leading-snug text-creme/75">Do básico ao dia a dia da área, com temas como Docker e GitHub.</p>
+              </div>
             </li>
-            <li class="em-breve-card" data-reveal>
-              <div class="em-breve-arte em-breve-arte--b"><span class="font-pixel">?</span></div>
-              <span class="selo">Em breve</span>
-              <p class="mt-4 font-pixel text-lg">Arte 03</p>
+            <li class="pilar" data-reveal>
+              <span class="pilar-icone" aria-hidden="true">:)</span>
+              <div>
+                <h3 class="font-pixel text-xl">Encontros presenciais</h3>
+                <p class="mt-2 leading-snug text-creme/75">Para sair da tela, conhecer o pessoal e aprender junto.</p>
+              </div>
             </li>
-            <li class="em-breve-card" data-reveal>
-              <div class="em-breve-arte em-breve-arte--c"><span class="font-pixel">?</span></div>
-              <span class="selo">Em breve</span>
-              <p class="mt-4 font-pixel text-lg">Arte 04</p>
+            <li class="pilar" data-reveal>
+              <span class="pilar-icone" aria-hidden="true">{ }</span>
+              <div>
+                <h3 class="font-pixel text-xl">Projetos em conjunto</h3>
+                <p class="mt-2 leading-snug text-creme/75">Prática de verdade para o portfólio, incluindo o próprio site da comunidade.</p>
+              </div>
+            </li>
+            <li class="pilar" data-reveal>
+              <span class="pilar-icone" aria-hidden="true">?!</span>
+              <div>
+                <h3 class="font-pixel text-xl">Troca de experiências</h3>
+                <p class="mt-2 leading-snug text-creme/75">Dúvidas, materiais e oportunidades circulando entre quem programa e quem está começando.</p>
+              </div>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- ===== Comunidade (mantida do site original) ===== -->
-      <section id="comunidade" class="scroll-mt-16 px-5 pb-24 md:px-8 md:pb-32">
-        <div class="mx-auto flex max-w-7xl flex-col items-center gap-8 rounded-[2rem] bg-amarelo px-6 py-14 text-center text-preto md:flex-row md:px-14 md:text-left" data-reveal>
-          <picture class="shrink-0">
-            <source type="image/avif" srcset="/img/logo-comunidade-160.avif 1x, /img/logo-comunidade-320.avif 2x" />
-            <img src="/img/logo-comunidade-160.webp" srcset="/img/logo-comunidade-160.webp 1x, /img/logo-comunidade-320.webp 2x" width="160" height="160" loading="lazy" decoding="async" alt="Primeiro logo da comunidade Epifania" class="h-28 w-28 rounded-full bg-preto p-2" />
-          </picture>
-          <div class="flex-1">
-            <p class="font-pixel text-sm uppercase tracking-widest text-preto/60">Comunidade</p>
-            <h2 class="mt-2 font-pixel text-3xl md:text-4xl">Onde tudo começou.</h2>
-            <p class="mt-3 text-lg text-preto/75">A Epifania nasceu numa comunidade de programação, que continua aberta para quem programa ou quer aprender: palestras, projetos colaborativos e muita troca.</p>
+      <div class="borda-pixel bg-amarelo text-creme" aria-hidden="true"></div>
+
+      <!-- ===== Nossa história =====
+           Cada marco aponta para um commit real deste repositório. Para acrescentar um, use o hash do commit
+           (git log --reverse) e a data dele. -->
+      <section id="historia" class="scroll-mt-16 bg-creme text-preto">
+        <div class="mx-auto grid max-w-7xl items-start gap-14 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-[5fr_7fr] lg:gap-20">
+          <div class="lg:sticky lg:top-24">
+            <p class="eyebrow !text-preto/60" data-reveal>Nossa história</p>
+            <h2 class="titulo !text-preto" data-reveal>Começou com código.<br />Virou camiseta.</h2>
+            <p class="mt-6 text-lg leading-relaxed text-preto/75" data-reveal>
+              Programador guarda memória em commit: cada alteração do site fica registrada, com data e tudo. Então fomos lá atrás reler os nossos.
+            </p>
+            <figure class="relative mt-10 w-[92%] -rotate-1 rounded-lg bg-white p-2 shadow-xl" data-reveal>
+              <picture>
+                <source type="image/avif" srcset="/img/morgana-480.avif 480w, /img/morgana-960.avif 960w" sizes="(min-width: 1024px) 38vw, 90vw" />
+                <img src="/img/morgana-960.webp" srcset="/img/morgana-480.webp 480w, /img/morgana-960.webp 960w" sizes="(min-width: 1024px) 38vw, 90vw" width="960" height="1707" loading="lazy" decoding="async" alt="Morgana, a gata preta mascote da Epifania, dormindo enrolada no lençol" class="aspect-[4/3] w-full rounded object-cover object-[50%_45%]" />
+              </picture>
+              <figcaption class="absolute -bottom-3 -right-3 rotate-2 rounded bg-amarelo px-3 py-1 font-pixel text-sm">Morgana, a gata preta original.</figcaption>
+            </figure>
           </div>
-          <div class="flex shrink-0 flex-wrap justify-center gap-3">
-            <a data-link="whatsapp" href="#" class="rounded-2xl bg-preto px-6 py-3 font-pixel text-creme transition hover:scale-105">WhatsApp</a>
-            <a data-link="discord" href="#" class="rounded-2xl bg-preto px-6 py-3 font-pixel text-creme transition hover:scale-105">Discord</a>
+
+          <ol class="linha-tempo space-y-12">
+            <li data-reveal>
+              <p class="marco-meta"><time datetime="2025-07-25">25 jul 2025</time> <a class="commit" href="https://github.com/EpifaniaGatopreto/SiteOficial/commit/399df48" target="_blank" rel="noopener" aria-label="Ver o commit 399df48 no GitHub">399df48</a></p>
+              <h3 class="marco-titulo">A comunidade ganha endereço</h3>
+              <p class="marco-texto">No primeiro commit, o recado já era esse: da comunidade para a comunidade. Palestras, projetos em conjunto, encontro presencial marcado e a Morgana, uma gata preta de verdade, como mascote oficial.</p>
+            </li>
+            <li data-reveal>
+              <p class="marco-meta"><time datetime="2025-08-12">12 ago 2025</time> <a class="commit" href="https://github.com/EpifaniaGatopreto/SiteOficial/commit/4c90ac0" target="_blank" rel="noopener" aria-label="Ver o commit 4c90ac0 no GitHub">4c90ac0</a></p>
+              <h3 class="marco-titulo">Epifania no JavaDay</h3>
+              <p class="marco-texto">A comunidade marca presença no JavaDay, e o site passa a dedicar uma página a quem deu palestra e ajudou o grupo a crescer.</p>
+            </li>
+            <li data-reveal>
+              <p class="marco-meta"><time datetime="2025-09-08">8 set 2025</time> <a class="commit" href="https://github.com/EpifaniaGatopreto/SiteOficial/commit/e8f0c74" target="_blank" rel="noopener" aria-label="Ver o commit e8f0c74 no GitHub">e8f0c74</a></p>
+              <h3 class="marco-titulo">“Docker, GitHub e muito mais!!”</h3>
+              <p class="marco-texto">O chamado para a reunião de 20 de setembro, com duas exclamações mesmo. Aprender junto sempre foi o programa principal.</p>
+            </li>
+            <li data-reveal>
+              <p class="marco-meta"><time datetime="2026-03-31">31 mar 2026</time> <a class="commit" href="https://github.com/EpifaniaGatopreto/SiteOficial/commit/b201a38" target="_blank" rel="noopener" aria-label="Ver o commit b201a38 no GitHub">b201a38</a></p>
+              <h3 class="marco-titulo">O próprio site vira treino</h3>
+              <p class="marco-texto">O site ganha cara nova e segue como projeto aberto: quem está na comunidade contribui pelo GitHub e pega prática de verdade.</p>
+            </li>
+            <li class="marco-destaque" data-reveal>
+              <div class="rounded-2xl bg-preto p-6 text-creme md:p-8">
+                <p class="marco-meta !text-creme/60"><time datetime="2026-11-03">3 nov 2026</time> <a class="commit" href="https://github.com/EpifaniaGatopreto/SiteOficial/commit/439c44a" target="_blank" rel="noopener" aria-label="Ver o commit 439c44a no GitHub">439c44a</a></p>
+                <h3 class="marco-titulo !text-3xl text-amarelo md:!text-4xl">Virou marca.</h3>
+                <p class="marco-texto !text-creme/80">Com o tempo, as piadas internas começaram a virar desenho. Pedimos ao nosso artista que transformasse esse universo em estampa e fizemos 10 camisetas para testar se o pessoal ia gostar. Gostaram.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <p class="marco-meta">hoje <a class="commit" href="https://github.com/EpifaniaGatopreto/SiteOficial/commits/main" target="_blank" rel="noopener" aria-label="Ver todos os commits no GitHub">HEAD -&gt; main</a></p>
+              <h3 class="marco-titulo cursor">E continua</h3>
+              <p class="marco-texto">A comunidade segue aberta e continua sendo a nossa origem. As camisetas levam esse universo para mais gente.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <div class="borda-pixel bg-creme text-preto" aria-hidden="true"></div>
+
+      <!-- ===== A marca: o gato da comunidade ganha terno ===== -->
+      <section id="marca" class="relative scroll-mt-16 overflow-hidden">
+        <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-2 lg:gap-20">
+          <div data-reveal>
+            <p class="eyebrow">A marca</p>
+            <h2 class="titulo">O mesmo gato.<br />Agora de terno.</h2>
+            <p class="mt-6 text-lg leading-relaxed text-creme/75">
+              O gato preto que era o avatar do grupo ganhou moldura, terno e gravata. A comunidade continua a mesma, só que agora dá para vestir.
+            </p>
+            <p class="mt-4 text-lg leading-relaxed text-creme/75">
+              Camisetas autorais com arte original e muito gato preto, para quem programa e para quem nunca abriu um terminal na vida.
+            </p>
+            <a href="#colecao" class="botao mt-8">Ver as camisetas</a>
+          </div>
+
+          <div class="brilho relative flex items-center justify-center gap-3 sm:gap-6" data-reveal>
+            <figure class="relative w-20 shrink-0 text-center sm:w-36">
+              <picture>
+                <source type="image/avif" srcset="/img/logo-comunidade-160.avif 1x, /img/logo-comunidade-320.avif 2x" />
+                <img src="/img/logo-comunidade-160.webp" srcset="/img/logo-comunidade-160.webp 1x, /img/logo-comunidade-320.webp 2x" width="160" height="160" loading="lazy" decoding="async" alt="Primeiro logo da comunidade: cara de gato preto" class="w-full rounded-full border border-creme/15 bg-preto p-2" />
+              </picture>
+              <figcaption class="legenda">o avatar do grupo</figcaption>
+            </figure>
+            <svg viewBox="0 0 9 7" width="36" height="28" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true" class="relative shrink-0 text-amarelo"><path d="M0 3h7v1H0zM5 1h1v1H5zM6 2h1v1H6zM7 3h1v1H7zM6 4h1v1H6zM5 5h1v1H5z" /></svg>
+            <figure class="relative text-center">
+              <picture>
+                <source type="image/avif" srcset="/img/logo-grande-300.avif 1x, /img/logo-grande-601.avif 2x" />
+                <img src="/img/logo-grande-601.webp" srcset="/img/logo-grande-300.webp 1x, /img/logo-grande-601.webp 2x" width="495" height="601" loading="lazy" decoding="async" alt="Logo da marca: o gato preto de terno vermelho numa moldura oval" class="h-52 w-auto sm:h-80 lg:h-96" />
+              </picture>
+              <figcaption class="legenda">o retrato da marca</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Camisetas: por último, o que saiu de tudo isso ===== -->
+      <section id="colecao" class="scroll-mt-16 border-t border-creme/10 bg-carvao">
+        <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+          <div class="max-w-2xl" data-reveal>
+            <p class="eyebrow">Coleção 01 · Gato Programador</p>
+            <h2 class="titulo">Uma camisa.<br />Para todos.</h2>
+            <p class="mt-6 text-lg leading-relaxed text-creme/75">
+              A mesma camiseta e a mesma arte, em qualquer corpo. Na frente, um retrato discreto no peito. Nas costas, a arte completa: um gato preto no computador, cercado de janelas, plantas e caos. Qualquer semelhança com o seu dia não é coincidência.
+            </p>
+          </div>
+
+          <div class="galeria mt-12" tabindex="0" role="group" aria-label="Fotos da camiseta Gato Programador" data-reveal>
+            <figure>
+              <div class="overflow-hidden rounded-3xl bg-[#958577]">
+                <picture>
+                  <source type="image/avif" srcset="/img/modelo-feminina-480.avif 480w, /img/modelo-feminina-960.avif 960w, /img/modelo-feminina-1440.avif 1440w" sizes="(min-width: 1280px) 400px, (min-width: 768px) 31vw, 82vw" />
+                  <img src="/img/modelo-feminina-960.webp" srcset="/img/modelo-feminina-480.webp 480w, /img/modelo-feminina-960.webp 960w, /img/modelo-feminina-1440.webp 1440w" sizes="(min-width: 1280px) 400px, (min-width: 768px) 31vw, 82vw" width="960" height="1200" loading="lazy" decoding="async" alt="Modelo feminina com a camiseta branca: logo do gato de terno no peito esquerdo" class="aspect-[4/5] w-full object-cover object-top" />
+                </picture>
+              </div>
+              <figcaption class="legenda">Frente: retrato no peito esquerdo</figcaption>
+            </figure>
+            <figure>
+              <div class="overflow-hidden rounded-3xl bg-[#958577]">
+                <picture>
+                  <source type="image/avif" srcset="/img/modelo-masculino-480.avif 480w, /img/modelo-masculino-960.avif 960w, /img/modelo-masculino-1440.avif 1440w" sizes="(min-width: 1280px) 400px, (min-width: 768px) 31vw, 82vw" />
+                  <img src="/img/modelo-masculino-960.webp" srcset="/img/modelo-masculino-480.webp 480w, /img/modelo-masculino-960.webp 960w, /img/modelo-masculino-1440.webp 1440w" sizes="(min-width: 1280px) 400px, (min-width: 768px) 31vw, 82vw" width="960" height="1200" loading="lazy" decoding="async" alt="Modelo masculino com a mesma camiseta branca e o logo no peito" class="aspect-[4/5] w-full object-cover object-top" />
+                </picture>
+              </div>
+              <figcaption class="legenda">A mesma camisa, modelagem unissex</figcaption>
+            </figure>
+            <figure data-protegido>
+              <div class="arte-protegida overflow-hidden rounded-3xl bg-white">
+                <picture>
+                  <source type="image/avif" srcset="/arte/gato-programador-600.avif 600w, /arte/gato-programador-1029.avif 1029w" sizes="(min-width: 1280px) 400px, (min-width: 768px) 31vw, 82vw" />
+                  <img src="/arte/gato-programador-1029.webp" srcset="/arte/gato-programador-600.webp 600w, /arte/gato-programador-1029.webp 1029w" sizes="(min-width: 1280px) 400px, (min-width: 768px) 31vw, 82vw" width="1029" height="1200" loading="lazy" decoding="async" draggable="false" alt="Arte das costas: gato preto programando, cercado por janelas de computador" class="aspect-[4/5] w-full object-contain" />
+                </picture>
+              </div>
+              <figcaption class="legenda">Costas: arte “Gato Programador”</figcaption>
+            </figure>
+          </div>
+
+          <dl class="mt-12 grid grid-cols-2 gap-6 border-t border-creme/10 pt-8 lg:grid-cols-4" data-reveal>
+            <div><dt class="eyebrow">Modelo</dt><dd class="mt-1 text-creme/80">Camiseta unissex</dd></div>
+            <div><dt class="eyebrow">Tecido</dt><dd class="mt-1 text-creme/80">100% algodão</dd></div>
+            <div><dt class="eyebrow">Estampa</dt><dd class="mt-1 text-creme/80">DTF, frente e costas</dd></div>
+            <div><dt class="eyebrow">Cores</dt><dd class="mt-1 text-creme/80">Branca · preta em breve</dd></div>
+          </dl>
+
+          <div class="mt-14 flex flex-col justify-between gap-6 rounded-3xl border border-creme/10 p-6 md:flex-row md:items-center md:p-8" data-reveal>
+            <div class="max-w-2xl">
+              <p class="eyebrow">Em desenvolvimento</p>
+              <h3 class="mt-2 font-pixel text-2xl">Próximas artes</h3>
+              <p class="mt-3 leading-relaxed text-creme/75">Cada estampa passa por rascunho, muitas ideias e teste de impressão antes de virar camiseta. Acompanhe no Instagram para ver primeiro.</p>
+            </div>
+            <a data-link="instagram" href="#" class="botao shrink-0 text-center">Seguir no Instagram</a>
           </div>
         </div>
       </section>
@@ -228,25 +311,26 @@
             <img src="/img/logo-48.webp" srcset="/img/logo-48.webp 1x, /img/logo-96.webp 2x" width="40" height="48" loading="lazy" alt="" class="h-9 w-auto" />
             <span class="font-pixel text-xl text-amarelo">epifania</span>
           </a>
-          <p class="mt-4 max-w-xs text-creme/60">Camisetas autorais com arte original e muito gato preto.</p>
+          <p class="mt-4 max-w-xs text-creme/60">Uma comunidade de programação que virou marca. Da comunidade para a comunidade.</p>
         </div>
-        <nav aria-label="Redes sociais">
-          <p class="eyebrow">Redes</p>
+        <nav aria-label="Comunidade">
+          <p class="eyebrow">Comunidade</p>
+          <ul class="mt-4 space-y-2">
+            <li><a data-link="whatsapp" href="#" class="rodape-link">WhatsApp</a></li>
+            <li><a data-link="discord" href="#" class="rodape-link">Discord</a></li>
+            <li><a data-link="github" href="#" class="rodape-link">Código do site</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Marca">
+          <p class="eyebrow">Marca</p>
           <ul class="mt-4 space-y-2">
             <li><a data-link="instagram" href="#" class="rodape-link">Instagram</a></li>
             <li><a data-link="tiktok" href="#" class="rodape-link">TikTok</a></li>
-            <li><a data-link="discord" href="#" class="rodape-link">Discord</a></li>
+            <li><a data-link="email" href="#" class="rodape-link">E-mail</a></li>
           </ul>
         </nav>
-        <div>
-          <p class="eyebrow">Contato</p>
-          <ul class="mt-4 space-y-2">
-            <li><a data-link="email" href="#" class="rodape-link">E-mail</a></li>
-            <li><a data-link="whatsapp" href="#" class="rodape-link">WhatsApp</a></li>
-          </ul>
-        </div>
       </div>
-      <p class="border-t border-creme/10 py-6 text-center text-sm text-creme/60">&copy; 2026 Epifania. Todos os direitos reservados. Artes protegidas — reprodução proibida.</p>
+      <p class="border-t border-creme/10 px-5 py-6 text-center text-sm text-creme/60">&copy; 2026 Epifania. Todos os direitos reservados. Artes protegidas: reprodução proibida.</p>
     </footer>
   </body>
 </html>
