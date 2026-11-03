@@ -1,9 +1,7 @@
 import "./styles.css";
-import { iniciarHero } from "./hero.js";
 import { aplicarLinks } from "./links.js";
 
 aplicarLinks();
-iniciarHero();
 
 // Entrada suave das seções
 const reveal = new IntersectionObserver(

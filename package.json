@@ -9,7 +9,7 @@
     "frames": "node scripts/frames.mjs",
     "imagens": "node scripts/imagens.mjs",
     "artes": "node scripts/artes.mjs",
-    "assets": "npm run frames && npm run imagens && npm run artes"
+    "assets": "npm run imagens && npm run artes"
   },
   "repository": {
     "type": "git",

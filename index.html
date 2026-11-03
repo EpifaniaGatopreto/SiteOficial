@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#0b0a08" />
     <link rel="canonical" href="https://epifaniagatopreto.com.br/" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <meta property="og:type" content="website" />
@@ -18,9 +19,8 @@
     <meta property="og:image" content="https://epifaniagatopreto.com.br/og.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- primeiro quadro do hero: é o maior elemento da primeira tela (LCP) -->
-    <link rel="preload" as="image" href="/frames/desktop/001.webp" media="(min-width: 768px) and (min-aspect-ratio: 4/5)" fetchpriority="high" />
-    <link rel="preload" as="image" href="/frames/mobile/001.webp" media="(max-width: 767px), (max-aspect-ratio: 4/5)" fetchpriority="high" />
+    <!-- logo grande da abertura: é o maior elemento da primeira tela (LCP) -->
+    <link rel="preload" as="image" type="image/avif" imagesrcset="/img/logo-grande-300.avif 1x, /img/logo-grande-601.avif 2x" fetchpriority="high" />
 
     <script>document.documentElement.classList.add("js");</script>
     <script type="module" src="/src/main.js"></script>
@@ -59,46 +59,18 @@
     </header>
 
     <main>
-      <!-- ===== Hero: scrollytelling (quadros do vídeo desenhados em <canvas> conforme a rolagem) ===== -->
-      <section id="inicio" class="hero" aria-label="Uma camisa, para todos">
-        <div class="hero-anim">
-          <div class="hero-sticky">
-            <picture>
-              <source media="(max-width: 767px), (max-aspect-ratio: 4/5)" srcset="/frames/mobile/001.webp" width="720" height="1280" />
-              <img id="hero-poster" src="/frames/desktop/001.webp" width="1600" height="900" alt="" fetchpriority="high" class="hero-media" />
-            </picture>
-            <canvas id="hero-canvas" class="hero-media" aria-hidden="true"></canvas>
-
-            <div class="hero-copy" aria-live="off">
-              <p class="hero-line" data-line="1">Uma camisa.</p>
-              <p class="hero-line" data-line="2">Para todos.</p>
-              <p class="hero-line" data-line="3">Da comunidade para a comunidade.</p>
-            </div>
-
-            <div class="hero-loader" role="progressbar" aria-label="Carregando animação" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-              <span></span>
-            </div>
-            <p class="hero-hint font-pixel">role ↓</p>
-          </div>
-        </div>
-
-        <!-- Sem animação (prefers-reduced-motion): as duas fotos lado a lado -->
-        <div class="hero-static">
-          <div class="mx-auto max-w-6xl px-5 pb-16 pt-28 md:px-8">
-            <p class="font-pixel text-3xl text-amarelo md:text-5xl">Uma camisa. Para todos.</p>
-            <p class="mt-3 text-lg text-creme/80">Da comunidade para a comunidade.</p>
-            <div class="mt-10 grid grid-cols-2 gap-4 md:gap-6">
-              <picture>
-                <source type="image/avif" srcset="/img/modelo-masculino-480.avif 480w, /img/modelo-masculino-960.avif 960w" sizes="(min-width: 1152px) 560px, 50vw" />
-                <img src="/img/modelo-masculino-960.webp" srcset="/img/modelo-masculino-480.webp 480w, /img/modelo-masculino-960.webp 960w" sizes="(min-width: 1152px) 560px, 50vw" width="960" height="1720" alt="Modelo masculino vestindo a camiseta branca com o logo no peito" class="w-full rounded-2xl" />
-              </picture>
-              <picture>
-                <source type="image/avif" srcset="/img/modelo-feminina-480.avif 480w, /img/modelo-feminina-960.avif 960w" sizes="(min-width: 1152px) 560px, 50vw" />
-                <img src="/img/modelo-feminina-960.webp" srcset="/img/modelo-feminina-480.webp 480w, /img/modelo-feminina-960.webp 960w" sizes="(min-width: 1152px) 560px, 50vw" width="960" height="1720" alt="Modelo feminina vestindo a mesma camiseta" class="w-full rounded-2xl" />
-              </picture>
-            </div>
-          </div>
-        </div>
+      <!-- ===== Abertura: a marca, com o logo bem grande ===== -->
+      <section id="inicio" class="abertura relative flex min-h-svh flex-col items-center justify-center overflow-hidden px-5 pb-14 pt-24 text-center">
+        <picture class="relative">
+          <source type="image/avif" srcset="/img/logo-grande-300.avif 1x, /img/logo-grande-601.avif 2x" />
+          <img src="/img/logo-grande-601.webp" srcset="/img/logo-grande-300.webp 1x, /img/logo-grande-601.webp 2x" width="495" height="601" fetchpriority="high" alt="Logo da Epifania: retrato de um gato preto de terno vermelho numa moldura oval" class="logo-abertura" />
+        </picture>
+        <h1 class="relative mt-8 font-pixel text-[clamp(3.5rem,11vw,8rem)] leading-none text-amarelo">epifania</h1>
+        <p class="relative mt-3 font-pixel text-lg uppercase tracking-[0.35em] text-creme/70">gato preto</p>
+        <p class="relative mt-8 max-w-xl text-xl leading-relaxed text-creme/85 md:text-2xl">
+          Camisetas autorais que nasceram de uma comunidade de programação.
+        </p>
+        <a href="#colecao" class="relative mt-10 font-pixel text-sm text-creme/70 transition hover:text-amarelo">conheça a coleção ↓</a>
       </section>
 
       <!-- ===== Coleção 01 ===== -->
@@ -117,7 +89,7 @@
               <div class="overflow-hidden rounded-3xl bg-[#958577]">
                 <picture>
                   <source type="image/avif" srcset="/img/modelo-masculino-480.avif 480w, /img/modelo-masculino-960.avif 960w, /img/modelo-masculino-1440.avif 1440w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" />
-                  <img src="/img/modelo-masculino-960.webp" srcset="/img/modelo-masculino-480.webp 480w, /img/modelo-masculino-960.webp 960w, /img/modelo-masculino-1440.webp 1440w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" width="960" height="1720" loading="lazy" decoding="async" alt="Frente da camiseta: logo do gato de terno no peito esquerdo" class="aspect-[4/5] w-full object-cover object-[50%_30%]" />
+                  <img src="/img/modelo-masculino-960.webp" srcset="/img/modelo-masculino-480.webp 480w, /img/modelo-masculino-960.webp 960w, /img/modelo-masculino-1440.webp 1440w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" width="960" height="1200" loading="lazy" decoding="async" alt="Modelo masculino com a camiseta branca: logo do gato de terno no peito esquerdo" class="aspect-[4/5] w-full object-cover object-top" />
                 </picture>
               </div>
               <figcaption class="legenda">Frente — retrato no peito esquerdo</figcaption>
@@ -140,7 +112,6 @@
             <div><dt class="eyebrow">Estampa</dt><dd class="mt-1 text-creme/80">DTF — frente e costas</dd></div>
             <div><dt class="eyebrow">Cores</dt><dd class="mt-1 text-creme/80">Branca · preta em breve</dd></div>
           </dl>
-          <a data-link="instagram" href="#" class="botao mt-10" data-reveal>Quero a minha</a>
         </div>
       </section>
 
@@ -169,6 +140,27 @@
               Foi aí que a Epifania virou marca: roupa feita por quem vive entre bugs e café, para quem se reconhece nisso.
             </p>
           </div>
+        </div>
+      </section>
+
+      <!-- ===== Para todos (unissex) ===== -->
+      <section id="para-todos" class="scroll-mt-16">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 md:grid-cols-2 md:gap-20 md:px-8 md:py-32">
+          <div class="space-y-6">
+            <p class="eyebrow" data-reveal>Unissex</p>
+            <h2 class="titulo" data-reveal>Uma camisa.<br />Para todos.</h2>
+            <p class="text-lg leading-relaxed text-creme/75" data-reveal>
+              A mesma camiseta e a mesma arte, em qualquer corpo. Modelagem unissex em algodão, feita para o dia a dia — do home office ao meetup.
+            </p>
+          </div>
+          <figure data-reveal>
+            <div class="overflow-hidden rounded-3xl bg-[#958577]">
+              <picture>
+                <source type="image/avif" srcset="/img/modelo-feminina-480.avif 480w, /img/modelo-feminina-960.avif 960w, /img/modelo-feminina-1440.avif 1440w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" />
+                <img src="/img/modelo-feminina-960.webp" srcset="/img/modelo-feminina-480.webp 480w, /img/modelo-feminina-960.webp 960w, /img/modelo-feminina-1440.webp 1440w" sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 100vw" width="960" height="1200" loading="lazy" decoding="async" alt="Modelo feminina com a mesma camiseta branca e o logo no peito" class="aspect-[4/5] w-full object-cover object-top" />
+              </picture>
+            </div>
+          </figure>
         </div>
       </section>
 

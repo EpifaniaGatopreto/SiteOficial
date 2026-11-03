@@ -15,7 +15,6 @@ npm run dev
 | --- | --- |
 | Links (Instagram, WhatsApp, Discord, TikTok, e-mail) | `src/links.js` — link vazio mostra o botão como "em breve" |
 | Textos das seções | `index.html` |
-| Frases do hero e em que ponto da rolagem aparecem | `index.html` (`.hero-line`) e `src/hero.js` (`LINHAS`) |
 | Cores e fontes | `src/styles.css` (`@theme`) |
 
 ## Imagens e proteção das artes
@@ -27,15 +26,15 @@ Os scripts geram em `public/` só versões otimizadas — e, no caso das artes, 
 assets-fonte/
   arte-original/        artes em alta (ex.: gato-programador.png)
   logo.png              logo do peito (fundo transparente)
-  modelo_*.png          fotos master dos modelos
-  transicao_*.mp4       vídeo da transição do hero (16:9 e 9:16)
+  modelo_*.png          fotos master dos modelos (com respiro acima da cabeça)
+  transicao_*.mp4       vídeo da transição homem → mulher (fora do site por enquanto)
 ```
 
 ```bash
 npm run artes     # artes com marca d'água -> public/arte/
-npm run imagens   # fotos, logo, favicon, imagem de compartilhamento -> public/img/
-npm run frames    # quadros do hero (precisa do ffmpeg) -> public/frames/
-npm run assets    # os três
+npm run imagens   # fotos (4:5, recortadas sempre a partir do topo), logo, favicon, og -> public/img/
+npm run assets    # os dois
+npm run frames    # (reserva) quadros da transição para uma futura animação -> public/frames/
 ```
 
 Para mostrar uma arte nova na seção "Em breve": coloque o original em `assets-fonte/arte-original/`,
