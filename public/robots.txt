@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /arte/
+
+Sitemap: https://epifaniagatopreto.com.br/sitemap.xml
