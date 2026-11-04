@@ -41,16 +41,13 @@
     @apply w-11 shrink-0 font-pixel text-2xl leading-7 text-amarelo sm:w-auto sm:text-3xl;
   }
   .marco-meta {
-    @apply flex flex-wrap items-center gap-x-3 gap-y-1 font-pixel text-sm text-preto/60;
+    @apply font-pixel text-sm text-preto;
   }
   .marco-titulo {
     @apply mt-2 font-pixel text-2xl leading-tight md:text-3xl;
   }
   .marco-texto {
     @apply mt-2 text-lg leading-relaxed text-preto/75;
-  }
-  .commit {
-    @apply rounded bg-preto px-2 py-1 font-pixel text-xs text-amarelo transition-colors hover:bg-amarelo hover:text-preto;
   }
 }
 
@@ -135,13 +132,6 @@ summary:focus-visible,
   top: 2rem;
   background: var(--color-amarelo);
   outline: 2px solid var(--color-preto);
-}
-.marco-destaque .commit {
-  background: var(--color-amarelo);
-  color: var(--color-preto);
-}
-.marco-destaque .commit:hover {
-  background: var(--color-creme);
 }
 .cursor::after {
   content: "_";

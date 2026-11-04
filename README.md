@@ -18,7 +18,7 @@ npm run dev
 | Links (Instagram, WhatsApp, Discord, TikTok, GitHub, e-mail) | `src/links.js` — com o link vazio, o botão não aparece |
 | Textos das seções | `index.html` |
 | Próximo encontro | `index.html`, no card `#participar` da comunidade — mude a data e o `data-ate`; o bloco some sozinho depois desse dia e os botões ficam |
-| Marcos da história | `index.html`, em `#historia` — cada marco aponta para um commit real (`git log --reverse`) |
+| Marcos da história | `index.html`, em `#historia` — as datas vêm dos commits reais (`git log --reverse`) |
 | Cores e fontes | `src/styles.css` (`@theme`) |
 
 ## Imagens e proteção das artes
